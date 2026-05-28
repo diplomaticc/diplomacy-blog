@@ -49,7 +49,7 @@ function MissionCard({ description, href, icon, status, statusTone, title, index
         href={href}
         className="mt-12 inline-flex items-center gap-3 font-display text-[11px] uppercase tracking-[0.26em] text-white/58 transition-colors duration-300 hover:text-accent-blue"
       >
-        Mission Brief <ArrowRight size={14} />
+        Read Briefing <ArrowRight size={14} />
       </a>
     </motion.article>
   );
@@ -70,10 +70,10 @@ export default function MissionsSection({ missions }: MissionsSectionProps) {
             <div>
               <div className="flex items-center gap-3 font-display text-[11px] uppercase tracking-[0.26em] text-accent-blue">
                 <Activity size={16} strokeWidth={1.6} />
-                <span>Live Telemetry</span>
+                <span>Strategic Intelligence</span>
               </div>
               <h2 className="mt-5 break-words font-display text-[2.85rem] leading-none font-bold text-white sm:text-6xl">
-                Active Missions
+                Active Agenda
               </h2>
             </div>
             <a
