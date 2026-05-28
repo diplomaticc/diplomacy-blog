@@ -1,23 +1,24 @@
 ---
-title: Artemis VII
-summary: Lunar south pole permanent habitat establishment and ice extraction operations.
-status: Nominal
-statusTone: green
-icon: satellite
+title: "The Strait of Hormuz"
+summary: "Strategic chokepoint analysis and naval diplomacy monitoring in the Persian Gulf corridor."
+status: "Active"
+statusTone: "green"
+icon: "star"
 order: 1
-vehicle: Selene Transfer Stack
-missionWindow: 18-month surface deployment
-destination: Shackleton Crater, Lunar South Pole
-coverImage: /images/mission-article-01.png
+vehicle: "Multilateral Diplomatic Framework"
+missionWindow: "Ongoing — quarterly review cycle"
+destination: "Persian Gulf, Strait of Hormuz"
+coverImage: "/images/mission-article-01.png"
 ---
-## Mission Objective
 
-Artemis VII extends AEON's permanent lunar presence with a modular habitat designed for autonomous assembly, closed-loop life support, and continuous ice extraction.
+## Engagement Objective
+
+The Strait of Hormuz remains the world's most critical maritime chokepoint, through which nearly 20% of global oil supply transits daily. DIPLOMATICC monitors the shifting naval postures, bilateral tensions, and back-channel negotiations that determine whether this corridor stays open — and at what political cost.
 
 ## Current Operations
 
-Surface drones are validating regolith sintering lanes around the habitat perimeter while the cryogenic processing plant ramps toward full capacity. Habitat occupancy readiness remains on track.
+Regional naval buildups are being tracked alongside back-channel dialogue between Gulf Cooperation Council members and Iranian diplomatic channels. Tanker incident frequency and international escort mission activity are being mapped against escalation indicators in real time.
 
 ## Why It Matters
 
-The south pole remains the proving ground for long-duration off-world living. Every liter of water extracted on-site reduces launch mass for deeper expeditions beyond cis-lunar space.
+Whoever controls the Strait controls a pressure valve on the global economy. Every warship deployed, every sanction imposed, and every quiet negotiation brokered around this 33-kilometer passage sends shockwaves through energy markets, alliance structures, and the balance of power from Washington to Beijing. This is not a regional story — it never was.
