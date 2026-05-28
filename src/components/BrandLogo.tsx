@@ -22,14 +22,14 @@ export default function BrandLogo({
   // 1. Vertical layout designed specifically for the center white circle badge
   if (kind === 'symbol') {
     return (
-      <div className="flex flex-col items-center justify-center w-full h-full p-1 text-center select-none">
+      <div className="flex flex-col items-center justify-center w-full h-full p-0.5 text-center select-none">
         <img 
           src="/my-custom-logo.png" 
-          className="h-7 w-7 object-contain mb-1.5 transform translate-y-1" 
+          className="h-8 w-8 object-contain mb-1 transform translate-y-0.5" 
           alt={label} 
           onError={(e) => { e.currentTarget.style.display = 'none'; }}
         />
-        <span className="font-bold tracking-tight text-[10px] uppercase text-orange-600 font-sans leading-none transform translate-y-0.5">
+        <span className="font-extrabold tracking-normal text-[13px] uppercase text-orange-600 font-sans leading-none transform translate-y-0.5">
           {label}
         </span>
       </div>
