@@ -64,19 +64,19 @@ export interface FooterMeta {
 }
 
 export const siteNav: NavLink[] = [
-  { label: 'Missions', href: '/missions/' },
-  { label: 'Reports', href: '/reports/' },
+  { label: 'Agenda', href: '/missions/' },
+  { label: 'Engagements', href: '/reports/' },
   { label: 'News', href: '/news/' },
   { label: 'Departures', href: '/departures/' },
   { label: 'Technology', href: '/technology/' },
-  { label: 'Science', href: '/science/' },
+  { label: 'Research', href: '/science/' },
   { label: 'About', href: '/about/' },
 ];
 
 export const heroLeftNav: NavLink[] = [
-  { label: 'Missions', href: '/missions/' },
-  { label: 'Explore', href: '/reports/' },
-  { label: 'Science', href: '/science/' },
+  { label: 'Agenda', href: '/missions/' },
+  { label: 'Engagements', href: '/reports/' },
+  { label: 'Research', href: '/science/' },
 ];
 
 export const heroRightNav: NavLink[] = [
@@ -90,29 +90,29 @@ export const mobileNav: NavLink[] = [...heroLeftNav, ...heroRightNav];
 export const heroContent: HeroContent = {
   eyebrow: 'THE BOUNDARY IS',
   paragraph:
-    'We stand at the precipice of the infinite. AEON exists to push human ambition beyond the heliosphere, seeking answers in the dark, and bringing the light of understanding back home.',
+    'We stand at the crosswinds of global shifting powers. DIPLOMATICC exists to analyze strategic foreign policy, track international summits, map cyber governance, and decode modern geopolitical relationships.',
   primaryCta: {
     href: '/missions/',
-    label: 'Explore Missions',
+    label: 'View Agenda',
   },
   secondaryCta: {
     href: '/science/',
-    label: 'Our Science',
+    label: 'Our Research',
   },
   utilityLabel: 'EST. 2024',
 };
 
 export const stats: StatBlockProps[] = [
-  { value: '14', label: 'Active Missions' },
-  { value: '4,200', label: 'Hours in Void' },
-  { value: '8', label: 'Planets Surveyed' },
-  { value: '2.4B', label: 'Miles Traveled' },
+  { value: '14', label: 'Active Briefings' },
+  { value: '4,200', label: 'Policy Papers' },
+  { value: '8', label: 'Summits Tracked' },
+  { value: '2.4B', label: 'Global Readers' },
 ];
 
 export const footerMeta: FooterMeta = {
-  title: 'AEON',
+  title: 'DIPLOMATICC',
   description:
-    'Government-backed deep space exploration agency. Pushing the boundaries of human ambition and scientific discovery.',
+    'An independent geopolitical think-tank and policy analysis platform. Tracking global engagements, strategic priorities, and modern international relations.',
 };
 
 export const footerDirectory: NavLink[] = [...siteNav];
