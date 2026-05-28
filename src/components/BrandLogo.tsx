@@ -26,9 +26,11 @@ export default function BrandLogo({
         alt={label} 
         onError={(e) => { e.currentTarget.style.display = 'none'; }}
       />
-      <span className="font-bold tracking-wider text-xl uppercase text-cyan-400 dark:text-cyan-400 font-sans drop-shadow-[0_0_6px_rgba(34,211,238,0.4)]">
-        {label}
-      </span>
+      {kind === 'wordmark' && (
+        <span className="font-bold tracking-wider text-xl uppercase text-orange-500 dark:text-orange-400 font-sans">
+          {label}
+        </span>
+      )}
     </div>
   );
 }
