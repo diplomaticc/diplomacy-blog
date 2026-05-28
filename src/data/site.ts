@@ -88,9 +88,9 @@ export const heroRightNav: NavLink[] = [
 export const mobileNav: NavLink[] = [...heroLeftNav, ...heroRightNav];
 
 export const heroContent: HeroContent = {
-  eyebrow: 'THE BOUNDARY IS',
+  eyebrow: 'BORDERS ARE DRAWN',
   paragraph:
-    'We stand at the crosswinds of global shifting powers. DIPLOMATICC exists to analyze strategic foreign policy, track international summits, map cyber governance, and decode modern geopolitical relationships.',
+    'Every border has a story. Every treaty has a price. DIPLOMATICC exists to read what others refuse to see.',
   primaryCta: {
     href: '/missions/',
     label: 'View Agenda',
