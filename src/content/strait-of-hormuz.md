@@ -1,7 +1,7 @@
 ---
 title: "The Strait of Hormuz"
 summary: "Strategic chokepoint analysis and naval diplomacy monitoring in the Persian Gulf corridor."
-status: "Active"
+status: "Nominal"
 statusTone: "green"
 icon: "star"
 order: 1
