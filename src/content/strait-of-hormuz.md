@@ -8,7 +8,7 @@ order: 1
 vehicle: "Multilateral Diplomatic Framework"
 missionWindow: "Ongoing — quarterly review cycle"
 destination: "Persian Gulf, Strait of Hormuz"
-coverImage: "/images/mission-article-01.png"
+coverImage: "/images/Strait_of_Hormuz_and_Musandam_Peninsula_(MODIS_2018-12-10).jpg"
 ---
 
 ## Engagement Objective
