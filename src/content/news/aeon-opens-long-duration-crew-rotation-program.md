@@ -1,10 +1,8 @@
 ---
-title: AEON Opens Long-Duration Crew Rotation Program
-summary: The agency has formally opened the selection and training pipeline for its next long-duration rotation, focused on operations across distributed outposts and transit architectures.
-publishedAt: 2026-02-11
-author: Mira Kestrel
-desk: Agency Briefing
-image: /images/news-article-03.png
+title: "The Shift in Modern Geopolitics"
+description: "My personal analysis of recent diplomatic strategies and global shifting alliances."
+pubDate: "2026-05-28"
+heroImage: "/images/blog-placeholder.jpg"
 ---
 AEON has opened its next long-duration crew rotation program, expanding the training pipeline for specialists who will operate across distributed habitats, transit vehicles, and logistics nodes rather than a single station environment.
 
