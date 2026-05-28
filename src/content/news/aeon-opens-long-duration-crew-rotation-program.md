@@ -1,8 +1,9 @@
 ---
 title: "The Shift in Modern Geopolitics"
-description: "My personal analysis of recent diplomatic strategies and global shifting alliances."
-pubDate: "2026-05-28"
-heroImage: "/images/blog-placeholder.jpg"
+summary: "My personal analysis of recent diplomatic strategies and global shifting alliances."
+publishedAt: 2026-05-28
+author: "Dip Das"
+desk: "Diplomatic Briefing"
 ---
 AEON has opened its next long-duration crew rotation program, expanding the training pipeline for specialists who will operate across distributed habitats, transit vehicles, and logistics nodes rather than a single station environment.
 
