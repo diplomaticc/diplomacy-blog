@@ -21,20 +21,6 @@ export default function HeroShell({
   rightNav,
 }: HeroShellProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const orbitalRings = [
-    {
-      size: 'min(55vw, 500px)',
-      borderColor: 'rgba(255, 255, 255, 0.05)',
-    },
-    {
-      size: 'min(38vw, 360px)',
-      borderColor: 'rgba(255, 255, 255, 0.10)',
-    },
-    {
-      size: 'min(24vw, 220px)',
-      borderColor: 'rgba(74, 158, 255, 0.25)',
-    },
-  ];
 
   return (
     <MotionConfig reducedMotion="user">
@@ -50,22 +36,6 @@ export default function HeroShell({
             alt="Strategic Background"
             className="hero-sky-image absolute inset-0 h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(74,158,255,0.15),transparent_45%),radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.04),transparent_42%)]" />
-
-          {orbitalRings.map((ring) => (
-            <div
-              key={ring.size}
-              className="absolute rounded-full border"
-              style={{
-                left: '50%',
-                top: '8%',
-                width: ring.size,
-                height: ring.size,
-                transform: 'translate(-50%, -50%)',
-                borderColor: ring.borderColor,
-              }}
-            />
-          ))}
         </div>
 
         <div className="absolute inset-0 z-10">
@@ -226,7 +196,7 @@ export default function HeroShell({
             <motion.div
               initial={{ opacity: 0, scaleY: 0 }}
               animate={{ opacity: 1, scaleY: 1 }}
-              transition={{ delay: 1.1, duration: 0.8, originY: 0, ease: aeonEase }}
+              transition={{ delay: 1.1, duration: 0.8, ease: aeonEase }}
               className="mt-8 hidden h-8 w-px origin-top bg-[linear-gradient(to_bottom,rgba(26,46,66,0.4),rgba(26,46,66,0))] 2xl:block"
             />
           </div>
