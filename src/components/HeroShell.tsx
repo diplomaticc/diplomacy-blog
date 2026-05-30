@@ -77,7 +77,7 @@ export default function HeroShell({
           <img
             src={content.image || "/images/diplomatic-hero.jpg"}
             alt="Strategic Background"
-            className="hero-sky-image absolute inset-0 h-full w-full object-cover object-top"
+            className="hero-sky-image absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(74,158,255,0.25),transparent_45%),radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.08),transparent_42%)]" />
 
