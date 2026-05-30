@@ -14,35 +14,6 @@ interface HeroShellProps {
   rightNav: NavLink[];
 }
 
-interface HeroStar {
-  delay: string;
-  duration: string;
-  left: string;
-  size: number;
-  top: string;
-}
-
-const heroStars = createHeroStars();
-
-function createHeroStars(count = 60): HeroStar[] {
-  return Array.from({ length: count }, (_, index) => {
-    const seed = (index + 1) * 19.37;
-    const left = ((Math.sin(seed) + 1) / 2) * 100;
-    const top = 2 + (((Math.cos(seed * 0.73) + 1) / 2) * 21);
-    const size = 1 + (((Math.sin(seed * 1.7) + 1) / 2) > 0.55 ? 1 : 0);
-    const duration = 2 + (((Math.cos(seed * 1.31) + 1) / 2) * 3);
-    const delay = ((Math.sin(seed * 2.1) + 1) / 2) * 3.2;
-
-    return {
-      left: `${left.toFixed(2)}%`,
-      top: `${top.toFixed(2)}%`,
-      size,
-      duration: `${duration.toFixed(2)}s`,
-      delay: `${delay.toFixed(2)}s`,
-    };
-  });
-}
-
 export default function HeroShell({
   content,
   leftNav,
@@ -77,24 +48,9 @@ export default function HeroShell({
           <img
             src={content.image || "/images/diplomatic-hero.jpg"}
             alt="Strategic Background"
-            className="hero-sky-image absolute inset-0 h-full w-full object-cover object-top"
+            className="hero-sky-image absolute inset-0 h-full w-full object-cover object-[30%_65%]"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(74,158,255,0.25),transparent_45%),radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.08),transparent_42%)]" />
-
-          {heroStars.map((star, index) => (
-            <span
-              key={`${star.left}-${star.top}-${index}`}
-              className="hero-star absolute rounded-full bg-white"
-              style={{
-                left: star.left,
-                top: star.top,
-                width: `${star.size}px`,
-                height: `${star.size}px`,
-                animationDuration: star.duration,
-                animationDelay: star.delay,
-              }}
-            />
-          ))}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(74,158,255,0.15),transparent_45%),radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.04),transparent_42%)]" />
 
           {orbitalRings.map((ring) => (
             <div
