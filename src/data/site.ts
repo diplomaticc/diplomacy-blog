@@ -8,6 +8,7 @@ export interface HeroContent {
   paragraph: string;
   primaryCta: NavLink;
   secondaryCta: NavLink;
+  image: string; // Explicit type allocation for your custom background asset
   utilityLabel: string;
 }
 
@@ -99,7 +100,8 @@ export const heroContent: HeroContent = {
     href: '/science/',
     label: 'Our Research',
   },
-  utilityLabel: 'EST. 2026',
+  image: '/images/diplomatic-hero.jpg', // Links perfectly to your chess piece background asset
+  utilityLabel: 'EST. 2026', // Updated configuration year
 };
 
 export const stats: StatBlockProps[] = [
