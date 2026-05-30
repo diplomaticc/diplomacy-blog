@@ -99,7 +99,7 @@ export const heroContent: HeroContent = {
     href: '/science/',
     label: 'Our Research',
   },
-  utilityLabel: 'EST. 2024',
+  utilityLabel: 'EST. 2026',
 };
 
 export const stats: StatBlockProps[] = [
