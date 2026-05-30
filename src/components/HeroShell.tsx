@@ -75,8 +75,8 @@ export default function HeroShell({
           }}
         >
           <img
-            src="/images/top_hero_image.png"
-            alt=""
+            src={content.image || "/images/diplomatic-hero.jpg"}
+            alt="Strategic Background"
             className="hero-sky-image absolute inset-0 h-full w-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(74,158,255,0.25),transparent_45%),radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.08),transparent_42%)]" />
@@ -242,40 +242,4 @@ export default function HeroShell({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65, duration: 0.9, ease: aeonEase }}
-              className="text-balance mt-5 max-w-md text-[0.98rem] font-light leading-7 text-muted-navy/75 sm:mt-6 sm:max-w-2xl sm:text-[1.04rem] sm:leading-8 md:max-w-3xl md:text-[1.08rem]"
-            >
-              {content.paragraph}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.85, ease: aeonEase }}
-              className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:mt-9 sm:flex-row sm:justify-center"
-            >
-              <a
-                href={content.primaryCta.href}
-                className="inline-flex min-h-12 items-center justify-center bg-navy-text px-8 font-display text-[10px] uppercase tracking-[0.22em] text-page-cream transition-colors duration-300 hover:bg-accent-blue"
-              >
-                {content.primaryCta.label}
-              </a>
-              <a
-                href={content.secondaryCta.href}
-                className="inline-flex min-h-12 items-center justify-center border border-navy-text/35 px-8 font-display text-[10px] uppercase tracking-[0.22em] text-navy-text transition-colors duration-300 hover:border-accent-blue hover:text-accent-blue"
-              >
-                {content.secondaryCta.label}
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scaleY: 0 }}
-              animate={{ opacity: 1, scaleY: 1 }}
-              transition={{ delay: 1.1, duration: 0.8, ease: aeonEase }}
-              className="mt-8 hidden h-8 w-px origin-top bg-[linear-gradient(to_bottom,rgba(26,46,66,0.4),rgba(26,46,66,0))] 2xl:block"
-            />
-          </div>
-        </div>
-      </section>
-    </MotionConfig>
-  );
-}
+              className="text-balance mt-5 max-w-md text-[0.98rem] font-light leading-7 text-muted-navy/75 sm:mt-6 sm:max-w-2xl sm:text-
