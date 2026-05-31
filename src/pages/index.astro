@@ -34,12 +34,6 @@ const [missionEntries, reportEntries, departureEntries] = await Promise.all([
 
 const featuredReport = reportEntries[0];
 const featuredDeparture = departureEntries[0];
-
-// 🛠️ Enhanced Link Filter: Intercepts both separate "/missions" subpage routes 
-// and internal "#missions" hashes, rerouting them cleanly to your homepage "#agenda" element.
-const cleanHeroContent = JSON.parse(JSON.stringify(heroContent).replace(/\/missions|#missions/g, '#agenda'));
-const cleanLeftNav = JSON.parse(JSON.stringify(heroLeftNav).replace(/\/missions|#missions/g, '#agenda'));
-const cleanMobileNav = JSON.parse(JSON.stringify(mobileNav).replace(/\/missions|#missions/g, '#agenda'));
 ---
 
 <html lang="en" class="bg-page-bg">
@@ -73,21 +67,21 @@ const cleanMobileNav = JSON.parse(JSON.stringify(mobileNav).replace(/\/missions|
   <body class="bg-page-bg font-body text-white antialiased">
     <main class="site-shell overflow-x-clip">
       
-      {/* 1. Hero Shell Navigation Header (Using cleanly rerouted layout links) */}
+      {/* 1. Navigation Header */}
       <HeroShell
         client:load
-        content={cleanHeroContent}
-        leftNav={cleanLeftNav}
-        mobileNav={cleanMobileNav}
+        content={heroContent}
+        leftNav={heroLeftNav}
+        mobileNav={mobileNav}
         rightNav={heroRightNav}
       />
 
-      {/* 2. Your New Upgraded Active Agenda Grid Block */}
+      {/* 2. Upgraded Active Agenda Matrix */}
       <div id="agenda" class="scroll-mt-20">
         <ActiveAgenda client:visible />
       </div>
 
-      {/* 3. Original Discovery Section */}
+      {/* 3. Analysis Spectrum Section */}
       {featuredReport ? (
         <DiscoverySection
           client:visible
@@ -96,10 +90,10 @@ const cleanMobileNav = JSON.parse(JSON.stringify(mobileNav).replace(/\/missions|
         />
       ) : null}
       
-      {/* 4. Data Metrics Graphs */}
+      {/* 4. Performance Metrics Graph */}
       <StatsSection client:visible stats={stats} />
       
-      {/* 5. Strategic Briefings Logs */}
+      {/* 5. Briefings Logs */}
       {featuredDeparture ? (
         <DepartureSection
           client:visible
