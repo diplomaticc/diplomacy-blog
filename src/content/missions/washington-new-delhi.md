@@ -6,6 +6,8 @@ statusTone: "gold"
 destination: "Indo-Pacific Region"
 vehicle: "10-Year Major Defence Partnership Framework Agreement + Underwater Domain Awareness Roadmap"
 icon: "satellite"
+order: 2
+missionWindow: "May 24–25, 2026"
 ---
 
 ### Briefing Overview
