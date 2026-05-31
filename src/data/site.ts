@@ -8,7 +8,7 @@ export interface HeroContent {
   paragraph: string;
   primaryCta: NavLink;
   secondaryCta: NavLink;
-  image: string; // Explicit type allocation for your custom background asset
+  image: string;
   utilityLabel: string;
 }
 
@@ -65,7 +65,7 @@ export interface FooterMeta {
 }
 
 export const siteNav: NavLink[] = [
-  { label: 'Agenda', href: '#agenda' }, // ◄ Updated path targeting the home matrix scroll area
+  { label: 'Agenda', href: '/missions/' }, // ◄ Restored to missions subpage route
   { label: 'Engagements', href: '/reports/' },
   { label: 'News', href: '/news/' },
   { label: 'Departures', href: '/departures/' },
@@ -75,7 +75,7 @@ export const siteNav: NavLink[] = [
 ];
 
 export const heroLeftNav: NavLink[] = [
-  { label: 'Agenda', href: '#agenda' }, // ◄ Updated path targeting the home matrix scroll area
+  { label: 'Agenda', href: '/missions/' }, // ◄ Restored to missions subpage route
   { label: 'Engagements', href: '/reports/' },
   { label: 'Research', href: '/science/' },
 ];
@@ -93,15 +93,15 @@ export const heroContent: HeroContent = {
   paragraph:
     'Every border has a story. Every treaty has a price. DIPLOMATICC exists to read what others refuse to see.',
   primaryCta: {
-    href: '#agenda', // ◄ Updated routing direction targeting your local grid container
+    href: '/missions/', // ◄ Restored to missions subpage route
     label: 'View Agenda',
   },
   secondaryCta: {
     href: '/science/',
     label: 'Our Research',
   },
-  image: '/images/diplomatic-hero.jpg', // Links perfectly to your chess piece background asset
-  utilityLabel: 'EST. 2026', // Updated configuration year
+  image: '/images/diplomatic-hero.jpg',
+  utilityLabel: 'EST. 2026',
 };
 
 export const stats: StatBlockProps[] = [
