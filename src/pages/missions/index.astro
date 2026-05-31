@@ -1,133 +1,54 @@
 ---
-import { getCollection } from 'astro:content';
-import HeroShell from '../../components/HeroShell';
-import FooterSection from '../../components/FooterSection';
-import {
-  footerDirectory,
-  footerMeta,
-  footerPolicies,
-  heroContent,
-  heroLeftNav,
-  heroRightNav,
-  mobileNav,
-} from '../../data/site';
-import '../../styles/global.css';
+import { Rocket, Satellite, Star } from 'lucide-react';
 
-// Fetch all tactical items dynamically from your repository files
-const missionEntries = await getCollection('missions') || [];
+import CollectionIndexLayout from '../../layouts/CollectionIndexLayout.astro';
+import { getMissionEntries } from '../../lib/content';
 
-// Clean up the main hero properties for an archive view header layout
-const archiveHeroContent = {
-  ...heroContent,
-  title: "Strategic Operational Agenda",
-  paragraph: "Browse DIPLOMATICC’s active intelligence dossiers, track structural shifts across global security theaters, and access full briefing profiles."
+const missions = await getMissionEntries();
+const iconMap = {
+  satellite: Satellite,
+  rocket: Rocket,
+  star: Star,
 };
 ---
 
-<html lang="en" class="bg-page-bg">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Operational Matrices Archive | DIPLOMATICC</title>
-  </head>
-  <body class="bg-[#060a12] font-body text-white antialiased">
-    
-    {/* 1. Global Navigation Header */}
-    <HeroShell
-      client:load
-      content={archiveHeroContent}
-      leftNav={heroLeftNav}
-      mobileNav={mobileNav}
-      rightNav={heroRightNav}
-    />
-
-    {/* 2. Main Archive Matrix Area */}
-    <section class="py-16 px-4 max-w-7xl mx-auto min-h-[60vh]">
-      <div class="mb-12">
-        <span class="text-[10px] font-bold tracking-widest text-blue-500 uppercase block mb-2">
-          COLLECTION ARCHIVE
-        </span>
-        <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight font-display mb-4 uppercase">
-          Active Intel Agenda
-        </h1>
-        <p class="text-zinc-400 max-w-2xl font-light text-sm leading-relaxed">
-          Review live diplomatic monitoring files, navigate structural corridor friction parameters, and open complete analysis logs for any active cross-border vector.
-        </p>
-      </div>
-
-      {/* Dynamic Cards Grid Matrix Display */}
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {missionEntries.map((entry) => {
-          const { title, description, status, destination, vehicle } = entry.data;
-          
-          // Determine status category styling properties
-          const isCritical = status?.toLowerCase() === 'critical';
-          const isEnRoute = status?.toLowerCase() === 'en route' || status?.toLowerCase() === 'stabilizing';
-
-          return (
-            <div class="bg-[#0b121f]/40 border border-zinc-800/60 rounded-sm p-6 flex flex-col justify-between hover:border-blue-500/30 transition-all duration-300 group">
-              <div>
-                <div class="flex items-center justify-between mb-6">
-                  {/* Replaced template space icons with a generic data-node identifier layout */}
-                  <div class="w-8 h-8 rounded-sm bg-zinc-800/30 border border-zinc-700/40 flex items-center justify-center text-zinc-400 group-hover:text-blue-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  
-                  <span class={`text-[9px] font-bold tracking-widest px-2 py-1 rounded-sm border ${
-                    isCritical ? 'text-amber-400 border-amber-500/25 bg-amber-500/5' :
-                    isEnRoute ? 'text-emerald-400 border-emerald-500/25 bg-emerald-500/5' :
-                    'text-blue-400 border-blue-500/25 bg-blue-500/5'
-                  }`}>
-                    {status || 'NOMINAL'}
-                  </span>
-                </div>
-
-                <h3 class="text-xl font-bold text-white tracking-tight mb-4 group-hover:text-zinc-200 transition-colors">
-                  {title}
-                </h3>
-                <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-light">
-                  {description}
-                </p>
-              </div>
-
-              <div class="mt-4 pt-4 border-t border-zinc-800/40">
-                {destination && (
-                  <div class="mb-3">
-                    <span class="text-[9px] font-bold tracking-widest text-blue-500 uppercase block mb-0.5">
-                      Destination
-                    </span>
-                    <span class="text-xs text-zinc-300 font-light block">{destination}</span>
-                  </div>
-                )}
-                {vehicle && (
-                  <div class="mb-6">
-                    <span class="text-[9px] font-bold tracking-widest text-blue-500 uppercase block mb-0.5">
-                      Vehicle / Framework
-                    </span>
-                    <span class="text-xs text-zinc-300 font-light block">{vehicle}</span>
-                  </div>
-                )}
-
-                <a href={`/missions/${entry.slug}`} class="text-[10px] font-bold tracking-widest text-blue-400 hover:text-blue-300 uppercase flex items-center gap-1 transition-colors">
-                  Open Briefing <span class="text-xs group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
+<CollectionIndexLayout
+  title="Active Missions"
+  eyebrow="Collection Archive"
+  intro="Browse AEON's live mission slate, review current mission state, and open the full briefing for any active operation."
+  description="Browse every active mission currently tracked by AEON Space Agency."
+>
+  <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {missions.map((mission) => {
+      const Icon = iconMap[mission.data.icon];
+      return (
+        <a
+          href={`/missions/${mission.id}/`}
+          class="group flex h-full flex-col border border-white/10 bg-deep-space-card p-7 transition-colors duration-300 hover:border-accent-blue/50"
+        >
+          <div class="flex items-start justify-between gap-6">
+            <Icon className="mt-1 text-white/18" size={28} strokeWidth={1.4} />
+            <span class={`rounded-full px-3 py-1 font-display text-[10px] uppercase tracking-[0.22em] ${mission.data.statusTone === 'green' ? 'bg-emerald-400/10 text-emerald-300' : mission.data.statusTone === 'blue' ? 'bg-accent-blue/14 text-accent-blue' : 'bg-warm-gold/12 text-warm-gold'}`}>
+              {mission.data.status}
+            </span>
+          </div>
+          <h2 class="mt-12 break-words font-display text-[2rem] leading-none text-white">{mission.data.title}</h2>
+          <p class="mt-5 text-[1.02rem] leading-8 text-white/68">{mission.data.summary}</p>
+          <dl class="mt-8 grid gap-4 text-sm text-white/54">
+            <div>
+              <dt class="font-display text-[10px] uppercase tracking-[0.22em] text-accent-blue">Destination</dt>
+              <dd class="mt-2 leading-6">{mission.data.destination}</dd>
             </div>
-          );
-        })}
-      </div>
-    </section>
-
-    {/* 3. Global Footer Component */}
-    <FooterSection
-      client:visible
-      directory={footerDirectory}
-      meta={footerMeta}
-      policies={footerPolicies}
-    />
-
-  </body>
-</html>
+            <div>
+              <dt class="font-display text-[10px] uppercase tracking-[0.22em] text-accent-blue">Vehicle</dt>
+              <dd class="mt-2 leading-6">{mission.data.vehicle}</dd>
+            </div>
+          </dl>
+          <span class="mt-10 inline-flex items-center gap-3 font-display text-[11px] uppercase tracking-[0.24em] text-white/55 transition-colors duration-300 group-hover:text-accent-blue">
+            Open briefing <span aria-hidden="true">→</span>
+          </span>
+        </a>
+      );
+    })}
+  </div>
+</CollectionIndexLayout>
