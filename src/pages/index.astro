@@ -9,46 +9,17 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import MissionsSection from '../components/MissionsSection';
 
-// 1. Fetch your content collections for the data loops cleanly
+// 1. Fetch your content collections safely
 const departures = await getCollection('departures') || [];
 const missions = await getCollection('missions') || [];
 
-// 2. Restored hardcoded configuration properties exactly from your working snapshot
+// 2. Hero Configuration (Exactly matching the native format from your initial working snapshot)
 const heroContent = {
   image: "/images/diplomatic-hero.jpg",
   utilityLabel: "Est. 2026 // Operational Matrix",
   paragraph: "Diplomaticc delivers rigorous cross-border analysis, tracking critical chokepoints, bilateral statecraft negotiations, and the structural systemic shifts within global security architectures.",
   primaryCta: { label: "Access Briefings", href: "#agenda" },
   secondaryCta: { label: "Research Repository", href: "/research" }
-};
-
-// 3. Defensive fallback models for your original components to ensure they never crash
-const countdownContent = {
-  title: "Next Strategic Briefing Alignment",
-  description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
-  launchDate: "2026-06-15T00:00:00Z"
-};
-
-const statsContent = [
-  { value: "194", label: "Monitored Sovereignties" },
-  { value: "24/7", label: "Chokepoint Surveillance" },
-  { value: "60+", label: "Active Bilateral Files" }
-];
-
-const departuresHeader = {
-  title: "Strategic Briefings",
-  subtitle: "Latest Intelligence Operational Logs",
-  image: "/images/diplomatic-hero.jpg"
-};
-
-const discoveryContent = {
-  title: "Global Systems // Regional Friction Points",
-  description: "Analyzing structural shifts across maritime corridors and sovereign negotiations."
-};
-
-const missionsHeader = {
-  title: "Active Diplomatic Frontiers",
-  subtitle: "Operational Theaters and Surveillance Vectors"
 };
 
 const leftNav = [
@@ -64,16 +35,105 @@ const rightNav = [
 ];
 
 const mobileNav = [...leftNav, ...rightNav];
+
+// 3. Multi-compatible Data Shapes to protect original components from crashing
+const countdownProps = {
+  title: "Next Strategic Briefing Alignment",
+  description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
+  launchDate: "2026-06-15T00:00:00Z",
+  date: "2026-06-15T00:00:00Z",
+  targetDate: "2026-06-15T00:00:00Z",
+  content: {
+    title: "Next Strategic Briefing Alignment",
+    description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
+    launchDate: "2026-06-15T00:00:00Z"
+  }
+};
+
+const statsProps = {
+  title: "Operational Metrics",
+  stats: [
+    { value: "194", label: "Monitored Sovereignties" },
+    { value: "24/7", label: "Chokepoint Surveillance" },
+    { value: "60+", label: "Active Bilateral Files" }
+  ],
+  items: [
+    { value: "194", label: "Monitored Sovereignties" },
+    { value: "24/7", label: "Chokepoint Surveillance" },
+    { value: "60+", label: "Active Bilateral Files" }
+  ],
+  content: {
+    title: "Operational Metrics",
+    stats: [
+      { value: "194", label: "Monitored Sovereignties" },
+      { value: "24/7", label: "Chokepoint Surveillance" },
+      { value: "60+", label: "Active Bilateral Files" }
+    ],
+    items: [
+      { value: "194", label: "Monitored Sovereignties" },
+      { value: "24/7", label: "Chokepoint Surveillance" },
+      { value: "60+", label: "Active Bilateral Files" }
+    ]
+  }
+};
+
+const departureProps = {
+  title: "Strategic Briefings",
+  subtitle: "Latest Intelligence Operational Logs",
+  image: "/images/diplomatic-hero.jpg",
+  departures: departures,
+  items: departures,
+  cards: departures,
+  data: departures,
+  content: {
+    title: "Strategic Briefings",
+    subtitle: "Latest Intelligence Operational Logs",
+    image: "/images/diplomatic-hero.jpg",
+    departures: departures,
+    items: departures,
+    cards: departures,
+    data: departures
+  }
+};
+
+const discoveryProps = {
+  title: "Global Systems // Regional Friction Points",
+  description: "Analyzing structural shifts across maritime corridors and sovereign negotiations.",
+  cta: { label: "Access Repository", href: "/research", url: "/research", link: "/research" },
+  link: { label: "Access Repository", href: "/research", url: "/research", link: "/research" },
+  content: {
+    title: "Global Systems // Regional Friction Points",
+    description: "Analyzing structural shifts across maritime corridors and sovereign negotiations.",
+    cta: { label: "Access Repository", href: "/research", url: "/research", link: "/research" },
+    link: { label: "Access Repository", href: "/research", url: "/research", link: "/research" }
+  }
+};
+
+const missionProps = {
+  title: "Active Diplomatic Frontiers",
+  subtitle: "Operational Theaters and Surveillance Vectors",
+  missions: missions,
+  items: missions,
+  cards: missions,
+  data: missions,
+  content: {
+    title: "Active Diplomatic Frontiers",
+    subtitle: "Operational Theaters and Surveillance Vectors",
+    missions: missions,
+    items: missions,
+    cards: missions,
+    data: missions
+  }
+};
 ---
 
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Original Hero Banner with template properties */}
+    {/* 1. Hero Banner - Restored to original format look */}
     <HeroShell 
       client:load 
       content={heroContent}
-      {...heroContent}
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
@@ -82,11 +142,10 @@ const mobileNav = [...leftNav, ...rightNav];
     {/* 2. Original Interactive Countdown Segment */}
     <LaunchCountdown 
       client:visible 
-      content={countdownContent}
-      {...countdownContent}
+      {...countdownProps}
     />
 
-    {/* 3. Your Upgraded Strategic Matrix Block (Kept exactly as requested) */}
+    {/* 3. Your Upgraded Strategic Matrix Section (Active Agenda Grid) */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
@@ -94,30 +153,23 @@ const mobileNav = [...leftNav, ...rightNav];
     {/* 4. Original Statistical Data Graph Display */}
     <StatsSection 
       client:visible 
-      content={statsContent}
-      stats={statsContent}
-      {...statsContent}
+      {...statsProps}
     />
 
     {/* 5. Original Template Deep-Content Navigation Panels */}
     <DepartureSection 
       client:visible 
-      content={departuresHeader}
-      {...departuresHeader}
-      departures={departures} 
+      {...departureProps}
     />
     
     <DiscoverySection 
       client:visible 
-      content={discoveryContent}
-      {...discoveryContent} 
+      {...discoveryProps}
     />
     
     <MissionsSection 
       client:visible 
-      content={missionsHeader}
-      {...missionsHeader}
-      missions={missions} 
+      {...missionProps}
     />
 
   </main>
