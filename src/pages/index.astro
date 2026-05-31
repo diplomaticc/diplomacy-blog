@@ -9,7 +9,7 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import MissionsSection from '../components/MissionsSection';
 
-// Connects the page back to the original template's data files
+// Fetch the core datasets from your repository content folders
 const homepage = await getEntry('homepage', 'index');
 const departures = await getCollection('departures');
 const missions = await getCollection('missions');
@@ -27,35 +27,64 @@ const rightNav = [
 ];
 
 const mobileNav = [...leftNav, ...rightNav];
+
+// Define a unified data layout configuration with safe object fallbacks
+const homepageData = homepage?.data || {};
 ---
 
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Original Hero Banner with its native properties */}
+    {/* 1. Hero Banner Section with multi-compatible data properties */}
     <HeroShell 
       client:load 
-      content={homepage?.data?.hero}
+      {...homepageData}
+      content={homepageData.hero || homepageData || {}}
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
     />
 
     {/* 2. Original Interactive Countdown Segment */}
-    <LaunchCountdown client:visible content={homepage?.data?.launchCountdown} />
+    <LaunchCountdown 
+      client:visible 
+      {...homepageData} 
+      content={homepageData.launchCountdown || homepageData} 
+    />
 
-    {/* 3. Your Upgraded Strategic Matrix Section */}
+    {/* 3. Your Upgraded Strategic Matrix Section (From Screenshot 2026-05-31 233950.png) */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
     
     {/* 4. Original Statistical Data Graph Display */}
-    <StatsSection client:visible content={homepage?.data?.stats} />
+    <StatsSection 
+      client:visible 
+      {...homepageData} 
+      stats={homepageData.stats || []} 
+      content={homepageData.stats || homepageData} 
+    />
 
-    {/* 5. Original Deep-Content Navigation Panels */}
-    <DepartureSection client:visible content={homepage?.data?.departures} departures={departures} />
-    <DiscoverySection client:visible content={homepage?.data?.discovery} />
-    <MissionsSection client:visible content={homepage?.data?.missions} missions={missions} />
+    {/* 5. Original Template Deep-Content Navigation Sections */}
+    <DepartureSection 
+      client:visible 
+      {...homepageData} 
+      departures={departures} 
+      content={homepageData.departures || homepageData} 
+    />
+    
+    <DiscoverySection 
+      client:visible 
+      {...homepageData} 
+      content={homepageData.discovery || homepageData} 
+    />
+    
+    <MissionsSection 
+      client:visible 
+      {...homepageData} 
+      missions={missions} 
+      content={homepageData.missions || homepageData} 
+    />
 
   </main>
 </Layout>
