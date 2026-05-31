@@ -8,7 +8,7 @@ vehicle: "10-Year Major Defence Partnership Framework Agreement + Underwater Dom
 icon: "satellite"
 order: 2
 missionWindow: "May 24–25, 2026"
-coverImage: "/images/Rubio-e1779991085579-539x470.jpg"
+coverImage: "/images/Rubio-e1779991085579-539x470.png"
 ---
 
 ### Briefing Overview
