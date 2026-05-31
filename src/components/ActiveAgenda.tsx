@@ -62,9 +62,9 @@ export default function ActiveAgenda() {
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500 shadow-[0_0_12px_#3b82f6]"></span>
               </span>
-              {/* Cyber Glowing Text Layer */}
+              {/* Cyber Glowing Text Layer (Globe Emoji Removed) */}
               <span class="text-[10px] font-bold tracking-widest text-blue-400 uppercase block drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]">
-                🌐 Strategic Intelligence Matrix
+                Strategic Intelligence Matrix
               </span>
             </div>
             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight font-display">
