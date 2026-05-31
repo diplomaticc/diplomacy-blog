@@ -3,7 +3,6 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import FooterSection from '../components/FooterSection';
 import HeroShell from '../components/HeroShell';
-import MissionsSection from '../components/MissionsSection';
 import StatsSection from '../components/StatsSection';
 import ActiveAgenda from '../components/ActiveAgenda';
 import {
@@ -22,7 +21,6 @@ import {
   getReportEntries,
   toDiscoveryContent,
   toLaunchRow,
-  toMissionCard,
   toNextDepartureContent,
   toSpectrumBars,
 } from '../lib/content';
@@ -69,7 +67,7 @@ const featuredDeparture = departureEntries[0];
   <body class="bg-page-bg font-body text-white antialiased">
     <main class="site-shell overflow-x-clip">
       
-      {/* 1. Original Working Header */}
+      {/* 1. Hero Shell Navigation Header */}
       <HeroShell
         client:load
         content={heroContent}
@@ -78,14 +76,12 @@ const featuredDeparture = departureEntries[0];
         rightNav={heroRightNav}
       />
 
-      {/* 2. Your Upgraded Active Agenda Grid Block */}
+      {/* 2. Your New Upgraded Active Agenda Grid Block */}
       <div id="agenda" class="scroll-mt-20">
         <ActiveAgenda client:visible />
       </div>
 
-      {/* 3. Original Restored Template Content Sections */}
-      <MissionsSection client:visible missions={missionEntries.map(toMissionCard)} />
-      
+      {/* 3. Original Discovery Section */}
       {featuredReport ? (
         <DiscoverySection
           client:visible
@@ -94,8 +90,10 @@ const featuredDeparture = departureEntries[0];
         />
       ) : null}
       
+      {/* 4. Data Metrics Graphs */}
       <StatsSection client:visible stats={stats} />
       
+      {/* 5. Strategic Briefings Logs */}
       {featuredDeparture ? (
         <DepartureSection
           client:visible
@@ -104,7 +102,7 @@ const featuredDeparture = departureEntries[0];
         />
       ) : null}
       
-      {/* 4. Original Footer */}
+      {/* 6. Footer Layout */}
       <FooterSection
         client:visible
         directory={footerDirectory}
