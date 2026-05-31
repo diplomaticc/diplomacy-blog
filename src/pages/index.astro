@@ -9,11 +9,20 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import MissionsSection from '../components/MissionsSection';
 
-// Fetch the core datasets from your repository content folders
+// 1. Fetch native template datasets from the content layer
 const homepage = await getEntry('homepage', 'index');
 const departures = await getCollection('departures');
 const missions = await getCollection('missions');
 
+// 2. Safely isolate data groups to prevent variable clashing
+const hero = homepage?.data?.hero || {};
+const launchCountdown = homepage?.data?.launchCountdown || {};
+const stats = homepage?.data?.stats || [];
+const departuresData = homepage?.data?.departures || {};
+const discovery = homepage?.data?.discovery || {};
+const missionsData = homepage?.data?.missions || {};
+
+// 3. Navigation routing
 const leftNav = [
   { label: "Agenda", href: "#agenda" },
   { label: "Engagements", href: "/engagements" },
@@ -27,19 +36,16 @@ const rightNav = [
 ];
 
 const mobileNav = [...leftNav, ...rightNav];
-
-// Define a unified data layout configuration with safe object fallbacks
-const homepageData = homepage?.data || {};
 ---
 
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Hero Banner Section with multi-compatible data properties */}
+    {/* 1. Hero Header - Supporting both direct props and object parameters */}
     <HeroShell 
       client:load 
-      {...homepageData}
-      content={homepageData.hero || homepageData || {}}
+      hero={hero}
+      {...hero}
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
@@ -48,11 +54,11 @@ const homepageData = homepage?.data || {};
     {/* 2. Original Interactive Countdown Segment */}
     <LaunchCountdown 
       client:visible 
-      {...homepageData} 
-      content={homepageData.launchCountdown || homepageData} 
+      launchCountdown={launchCountdown}
+      {...launchCountdown} 
     />
 
-    {/* 3. Your Upgraded Strategic Matrix Section (From Screenshot 2026-05-31 233950.png) */}
+    {/* 3. Your Upgraded Strategic Matrix Section (Kept exactly as shown in Screenshot 2026-05-31 233950.png) */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
@@ -60,30 +66,27 @@ const homepageData = homepage?.data || {};
     {/* 4. Original Statistical Data Graph Display */}
     <StatsSection 
       client:visible 
-      {...homepageData} 
-      stats={homepageData.stats || []} 
-      content={homepageData.stats || homepageData} 
+      stats={stats}
+      {...stats} 
     />
 
-    {/* 5. Original Template Deep-Content Navigation Sections */}
+    {/* 5. Original Template Deep-Content Navigation Panels */}
     <DepartureSection 
       client:visible 
-      {...homepageData} 
+      {...departuresData} 
       departures={departures} 
-      content={homepageData.departures || homepageData} 
     />
     
     <DiscoverySection 
       client:visible 
-      {...homepageData} 
-      content={homepageData.discovery || homepageData} 
+      discovery={discovery}
+      {...discovery} 
     />
     
     <MissionsSection 
       client:visible 
-      {...homepageData} 
+      {...missionsData} 
       missions={missions} 
-      content={homepageData.missions || homepageData} 
     />
 
   </main>
