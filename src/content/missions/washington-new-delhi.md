@@ -8,6 +8,7 @@ vehicle: "10-Year Major Defence Partnership Framework Agreement + Underwater Dom
 icon: "satellite"
 order: 2
 missionWindow: "May 24–25, 2026"
+image: "/images/Rubio-e1779991085579-539x470.jpg"
 ---
 
 ### Briefing Overview
@@ -18,4 +19,4 @@ Following high-level diplomatic stagnation, US Secretary of State Marco Rubio ex
 *   **Defense Cooperation:** India and the United States officially renewed their foundational decade-long defense cooperation architecture. Operational updates place heightened prioritization on joint maritime exercises, enhanced counter-terrorism protocols, and active co-development agreements under the "Make in India" initiative.
 *   **Trade Frameworks:** Both state delegations expressed strong strategic optimism regarding the upcoming finalization of an interim trade agreement, paving the way for a comprehensive bilateral trade treaty.
 *   **Immigration Modernization:** State Department representatives clarified that ongoing adjustments to J-1, F-1, and H-1B visa streams are fully integrated into broader global immigration systems updates.
-*   **Energy Security:** Indian ministry officials confirmed the United States' position as a primary, reliable energy partner, underscoring continued import portfolio diversification.
+*   **Energy Security:** Indian ministry officials confirmed the United States' position as a primary, reliable energy partner, underscores continued import portfolio diversification.
