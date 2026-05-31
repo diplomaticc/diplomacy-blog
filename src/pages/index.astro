@@ -1,4 +1,5 @@
 ---
+import { getCollection, getEntry } from 'astro:content';
 import Layout from '../layouts/SiteLayout.astro';
 import HeroShell from '../components/HeroShell';
 import LaunchCountdown from '../components/LaunchCountdown';
@@ -8,7 +9,11 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import MissionsSection from '../components/MissionsSection';
 
-// Restored default navigation structures matching the template parameters
+// Connects the page back to the original template's data files
+const homepage = await getEntry('homepage', 'index');
+const departures = await getCollection('departures');
+const missions = await getCollection('missions');
+
 const leftNav = [
   { label: "Agenda", href: "#agenda" },
   { label: "Engagements", href: "/engagements" },
@@ -27,29 +32,30 @@ const mobileNav = [...leftNav, ...rightNav];
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Original Template Hero Top Banner Section */}
+    {/* 1. Original Hero Banner with its native properties */}
     <HeroShell 
       client:load 
+      content={homepage?.data?.hero}
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
     />
 
     {/* 2. Original Interactive Countdown Segment */}
-    <LaunchCountdown client:visible />
+    <LaunchCountdown client:visible content={homepage?.data?.launchCountdown} />
 
-    {/* 3. Your Upgraded Strategic Matrix Block (From Screenshot 2026-05-31 233950.png) */}
+    {/* 3. Your Upgraded Strategic Matrix Section */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
     
     {/* 4. Original Statistical Data Graph Display */}
-    <StatsSection client:visible />
+    <StatsSection client:visible content={homepage?.data?.stats} />
 
-    {/* 5. Original Template Deep-Content Navigation Sections */}
-    <DepartureSection client:visible />
-    <DiscoverySection client:visible />
-    <MissionsSection client:visible />
+    {/* 5. Original Deep-Content Navigation Panels */}
+    <DepartureSection client:visible content={homepage?.data?.departures} departures={departures} />
+    <DiscoverySection client:visible content={homepage?.data?.discovery} />
+    <MissionsSection client:visible content={homepage?.data?.missions} missions={missions} />
 
   </main>
 </Layout>
