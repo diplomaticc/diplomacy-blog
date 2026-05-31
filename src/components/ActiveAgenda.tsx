@@ -71,7 +71,9 @@ export default function ActiveAgenda() {
               Active Agenda
             </h2>
           </div>
-          <a href="/research" class="text-xs font-bold tracking-widest text-zinc-400 hover:text-white uppercase transition-colors flex items-center gap-2">
+          
+          {/* 🛠️ FIXED: Redirects directly to your Active Missions collection archive */}
+          <a href="/missions/" class="text-xs font-bold tracking-widest text-zinc-400 hover:text-white uppercase transition-colors flex items-center gap-2">
             View All Intelligence <span class="text-sm">↗</span>
           </a>
         </div>
