@@ -6,6 +6,8 @@ statusTone: "gold"
 destination: "Middle East / Persian Gulf"
 vehicle: "14-Point Framework Memorandum of Understanding (MOU) via Pakistani Mediation"
 icon: "star"
+order: 3
+missionWindow: "60-Day Extension"
 ---
 
 ### Briefing Overview
