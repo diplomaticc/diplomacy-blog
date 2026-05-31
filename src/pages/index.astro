@@ -1,10 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/layout.astro';
 import HeroShell from '../components/HeroShell';
 import ActiveAgenda from '../components/ActiveAgenda';
 import UpcomingSummits from '../components/UpcomingSummits';
 
-// Real-world content context mirroring May 2026 intelligence parameters
 const heroContent = {
   image: "/images/diplomatic-hero.jpg",
   utilityLabel: "Est. 2026 // Operational Matrix",
@@ -31,7 +30,6 @@ const mobileNav = [...leftNav, ...rightNav];
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* Hero Section Banner Block */}
     <HeroShell 
       client:load 
       content={heroContent} 
@@ -40,19 +38,16 @@ const mobileNav = [...leftNav, ...rightNav];
       mobileNav={mobileNav} 
     />
 
-    {/* Active Agenda Section Node */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
 
-    {/* Micro-Coalition Trends & Summit Calendar Block */}
     <UpcomingSummits client:visible />
 
   </main>
 </Layout>
 
 <style>
-  /* Smooth scrolling experience between operational matrix points */
   html {
     scroll-behavior: smooth;
   }
