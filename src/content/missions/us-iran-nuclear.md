@@ -8,7 +8,7 @@ vehicle: "14-Point Framework Memorandum of Understanding (MOU) via Pakistani Med
 icon: "star"
 order: 3
 missionWindow: "60-Day Extension"
-coverImage: "/images/YOUR_IMAGE_NAME.png"
+coverImage: "/images/usairan.webp"
 ---
 
 ### Briefing Overview
