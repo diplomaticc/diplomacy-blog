@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/SiteLayout.astro';
 import HeroShell from '../components/HeroShell';
 import LaunchCountdown from '../components/LaunchCountdown';
@@ -9,20 +9,48 @@ import DepartureSection from '../components/DepartureSection';
 import DiscoverySection from '../components/DiscoverySection';
 import MissionsSection from '../components/MissionsSection';
 
-// 1. Fetch native template datasets from the content layer
-const homepage = await getEntry('homepage', 'index');
-const departures = await getCollection('departures');
-const missions = await getCollection('missions');
+// 1. Fetch your content collections for the data loops cleanly
+const departures = await getCollection('departures') || [];
+const missions = await getCollection('missions') || [];
 
-// 2. Safely isolate data groups to prevent variable clashing
-const hero = homepage?.data?.hero || {};
-const launchCountdown = homepage?.data?.launchCountdown || {};
-const stats = homepage?.data?.stats || [];
-const departuresData = homepage?.data?.departures || {};
-const discovery = homepage?.data?.discovery || {};
-const missionsData = homepage?.data?.missions || {};
+// 2. Restored hardcoded configuration properties exactly from your working snapshot
+const heroContent = {
+  image: "/images/diplomatic-hero.jpg",
+  utilityLabel: "Est. 2026 // Operational Matrix",
+  paragraph: "Diplomaticc delivers rigorous cross-border analysis, tracking critical chokepoints, bilateral statecraft negotiations, and the structural systemic shifts within global security architectures.",
+  primaryCta: { label: "Access Briefings", href: "#agenda" },
+  secondaryCta: { label: "Research Repository", href: "/research" }
+};
 
-// 3. Navigation routing
+// 3. Defensive fallback models for your original components to ensure they never crash
+const countdownContent = {
+  title: "Next Strategic Briefing Alignment",
+  description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
+  launchDate: "2026-06-15T00:00:00Z"
+};
+
+const statsContent = [
+  { value: "194", label: "Monitored Sovereignties" },
+  { value: "24/7", label: "Chokepoint Surveillance" },
+  { value: "60+", label: "Active Bilateral Files" }
+];
+
+const departuresHeader = {
+  title: "Strategic Briefings",
+  subtitle: "Latest Intelligence Operational Logs",
+  image: "/images/diplomatic-hero.jpg"
+};
+
+const discoveryContent = {
+  title: "Global Systems // Regional Friction Points",
+  description: "Analyzing structural shifts across maritime corridors and sovereign negotiations."
+};
+
+const missionsHeader = {
+  title: "Active Diplomatic Frontiers",
+  subtitle: "Operational Theaters and Surveillance Vectors"
+};
+
 const leftNav = [
   { label: "Agenda", href: "#agenda" },
   { label: "Engagements", href: "/engagements" },
@@ -41,11 +69,11 @@ const mobileNav = [...leftNav, ...rightNav];
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Hero Header - Supporting both direct props and object parameters */}
+    {/* 1. Original Hero Banner with template properties */}
     <HeroShell 
       client:load 
-      hero={hero}
-      {...hero}
+      content={heroContent}
+      {...heroContent}
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
@@ -54,11 +82,11 @@ const mobileNav = [...leftNav, ...rightNav];
     {/* 2. Original Interactive Countdown Segment */}
     <LaunchCountdown 
       client:visible 
-      launchCountdown={launchCountdown}
-      {...launchCountdown} 
+      content={countdownContent}
+      {...countdownContent}
     />
 
-    {/* 3. Your Upgraded Strategic Matrix Section (Kept exactly as shown in Screenshot 2026-05-31 233950.png) */}
+    {/* 3. Your Upgraded Strategic Matrix Block (Kept exactly as requested) */}
     <div id="agenda" class="scroll-mt-20">
       <ActiveAgenda client:visible />
     </div>
@@ -66,26 +94,29 @@ const mobileNav = [...leftNav, ...rightNav];
     {/* 4. Original Statistical Data Graph Display */}
     <StatsSection 
       client:visible 
-      stats={stats}
-      {...stats} 
+      content={statsContent}
+      stats={statsContent}
+      {...statsContent}
     />
 
     {/* 5. Original Template Deep-Content Navigation Panels */}
     <DepartureSection 
       client:visible 
-      {...departuresData} 
+      content={departuresHeader}
+      {...departuresHeader}
       departures={departures} 
     />
     
     <DiscoverySection 
       client:visible 
-      discovery={discovery}
-      {...discovery} 
+      content={discoveryContent}
+      {...discoveryContent} 
     />
     
     <MissionsSection 
       client:visible 
-      {...missionsData} 
+      content={missionsHeader}
+      {...missionsHeader}
       missions={missions} 
     />
 
