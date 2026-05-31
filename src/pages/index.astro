@@ -1,19 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../layouts/SiteLayout.astro';
 import HeroShell from '../components/HeroShell';
-import LaunchCountdown from '../components/LaunchCountdown';
-import ActiveAgenda from '../components/ActiveAgenda';
-import StatsSection from '../components/StatsSection';
-import DepartureSection from '../components/DepartureSection';
-import DiscoverySection from '../components/DiscoverySection';
-import MissionsSection from '../components/MissionsSection';
 
-// 1. Fetch data collections from your repository
-const departures = await getCollection('departures') || [];
-const missions = await getCollection('missions') || [];
-
-// 2. Hero Section Header Config Object
 const heroContent = {
   image: "/images/diplomatic-hero.jpg",
   utilityLabel: "Est. 2026 // Operational Matrix",
@@ -22,90 +10,6 @@ const heroContent = {
   secondaryCta: { label: "Research Repository", href: "/research" }
 };
 
-// 3. Multi-compatible Data Mappings to protect template sections from crashing
-const countdownProps = {
-  title: "Next Strategic Briefing Alignment",
-  description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
-  launchDate: "2026-06-15T00:00:00Z",
-  date: "2026-06-15T00:00:00Z",
-  targetDate: "2026-06-15T00:00:00Z",
-  content: {
-    title: "Next Strategic Briefing Alignment",
-    description: "Synchronizing multilateral data streams for the upcoming operational cycle.",
-    launchDate: "2026-06-15T00:00:00Z"
-  }
-};
-
-const statsContent = [
-  { value: "194", label: "Monitored Sovereignties" },
-  { value: "24/7", label: "Chokepoint Surveillance" },
-  { value: "60+", label: "Active Bilateral Files" }
-];
-
-const departureProps = {
-  title: "Strategic Briefings",
-  subtitle: "Latest Intelligence Operational Logs",
-  image: "/images/diplomatic-hero.jpg",
-  departures: departures,
-  items: departures,
-  launches: departures,
-  list: departures,
-  cards: departures,
-  content: {
-    title: "Strategic Briefings",
-    subtitle: "Latest Intelligence Operational Logs",
-    image: "/images/diplomatic-hero.jpg",
-    departures: departures,
-    items: departures,
-    launches: departures,
-    list: departures,
-    cards: departures
-  }
-};
-
-const discoveryProps = {
-  title: "Global Systems // Regional Friction Points",
-  description: "Analyzing structural shifts across maritime corridors and sovereign negotiations.",
-  cta: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-  link: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-  primaryCta: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-  button: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-  items: [],
-  features: [],
-  launches: [],
-  content: {
-    title: "Global Systems // Regional Friction Points",
-    description: "Analyzing structural shifts across maritime corridors and sovereign negotiations.",
-    cta: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-    link: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-    primaryCta: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-    button: { label: "Access Repository", href: "/research", text: "Access", url: "/research" },
-    items: [],
-    features: [],
-    launches: []
-  }
-};
-
-const missionProps = {
-  title: "Active Diplomatic Frontiers",
-  subtitle: "Operational Theaters and Surveillance Vectors",
-  missions: missions,
-  items: missions,
-  launches: missions,
-  list: missions,
-  cards: missions,
-  content: {
-    title: "Active Diplomatic Frontiers",
-    subtitle: "Operational Theaters and Surveillance Vectors",
-    missions: missions,
-    items: missions,
-    launches: missions,
-    list: missions,
-    cards: missions
-  }
-};
-
-// 4. Navigation Links
 const leftNav = [
   { label: "Agenda", href: "#agenda" },
   { label: "Engagements", href: "/engagements" },
@@ -124,54 +28,12 @@ const mobileNav = [...leftNav, ...rightNav];
 <Layout title="DIPLOMATICC | Geopolitical Intelligence & Strategic Analysis">
   <main class="bg-[#060a12] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
     
-    {/* 1. Hero Header Shell Section */}
     <HeroShell 
       client:load 
       content={heroContent} 
       leftNav={leftNav} 
       rightNav={rightNav} 
       mobileNav={mobileNav} 
-    />
-
-    {/* 2. Restored Countdown Tracker Section */}
-    <LaunchCountdown 
-      client:visible 
-      content={countdownProps.content} 
-      {...countdownProps} 
-    />
-
-    {/* 3. Your Upgraded Strategic Matrix Section (From Screenshot 2026-05-31 233950.png) */}
-    <div id="agenda" class="scroll-mt-20">
-      <ActiveAgenda client:visible />
-    </div>
-    
-    {/* 4. Restored Statistical Data Graphics Section */}
-    <StatsSection 
-      client:visible 
-      stats={statsContent} 
-      content={statsContent} 
-      {...statsContent} 
-    />
-
-    {/* 5. Restored Template Content Nav Blocks */}
-    <DepartureSection 
-      client:visible 
-      content={departureProps.content} 
-      {...departureProps} 
-      departures={departures} 
-    />
-    
-    <DiscoverySection 
-      client:visible 
-      content={discoveryProps.content} 
-      {...discoveryProps} 
-    />
-    
-    <MissionsSection 
-      client:visible 
-      content={missionProps.content} 
-      {...missionProps} 
-      missions={missions} 
     />
 
   </main>
