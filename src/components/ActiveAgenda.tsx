@@ -53,12 +53,20 @@ export default function ActiveAgenda() {
     <section class="bg-[#060a12] py-20 px-4 border-t border-zinc-800/40">
       <div class="max-w-7xl mx-auto">
         
-        {/* Header Block */}
+        {/* Header Block with Neon Glow Elements */}
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <span class="text-[10px] font-bold tracking-widest text-blue-500 uppercase block mb-2">
-              🌐 Strategic Intelligence Matrix
-            </span>
+            <div class="flex items-center gap-2 mb-2">
+              {/* Pulsing Glowing Radar Indicator */}
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500 shadow-[0_0_12px_#3b82f6]"></span>
+              </span>
+              {/* Cyber Glowing Text Layer */}
+              <span class="text-[10px] font-bold tracking-widest text-blue-400 uppercase block drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]">
+                🌐 Strategic Intelligence Matrix
+              </span>
+            </div>
             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight font-display">
               Active Agenda
             </h2>
@@ -74,7 +82,6 @@ export default function ActiveAgenda() {
             <div key={item.id} class="bg-[#0b121f]/40 border border-zinc-800/60 rounded-sm p-6 flex flex-col justify-between hover:border-blue-500/30 transition-all duration-300 group">
               
               <div>
-                {/* Badge Header Row */}
                 <div class="flex items-center justify-between mb-6">
                   <div class="w-8 h-8 rounded-sm bg-zinc-800/30 border border-zinc-700/40 flex items-center justify-center text-zinc-400 group-hover:text-blue-400 transition-colors">
                     {item.id === 'us-iran' && (
@@ -97,7 +104,6 @@ export default function ActiveAgenda() {
                   </span>
                 </div>
 
-                {/* Content Headings */}
                 <span class="text-[10px] font-bold tracking-wider text-zinc-500 uppercase block mb-1">
                   {item.category}
                 </span>
@@ -109,7 +115,7 @@ export default function ActiveAgenda() {
                 </p>
               </div>
 
-              {/* Added Metadata Block Matching Your Screenshot Style */}
+              {/* Technical Tracking Fields */}
               <div class="mt-4 pt-4 border-t border-zinc-800/40">
                 <div class="mb-3">
                   <span class="text-[9px] font-bold tracking-widest text-blue-500 uppercase block mb-0.5">
@@ -128,7 +134,6 @@ export default function ActiveAgenda() {
                   </span>
                 </div>
 
-                {/* Bottom Action Link */}
                 <a href={item.link} class="text-[10px] font-bold tracking-widest text-blue-400 hover:text-blue-300 uppercase flex items-center gap-1 transition-colors">
                   Access Briefing File <span class="text-xs group-hover:translate-x-1 transition-transform">→</span>
                 </a>
