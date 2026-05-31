@@ -1,64 +1,122 @@
-export const heroContent = {
-  title: "BORDERS ARE DRAWN IN BLOOD AND INK",
-  subtitle: "Every border has a story. Every treaty has a price.",
-  paragraph: "DIPLOMATICC exists to read what others refuse to see. Tracking critical chokepoints, bilateral statecraft negotiations, and structural systemic shifts within global security architectures.",
-  primaryCta: { label: "VIEW AGENDA", href: "#agenda" },
-  secondaryCta: { label: "OUR RESEARCH", href: "/research" }
-};
+export interface NavLink {
+  href: string;
+  label: string;
+}
 
-export const heroLeftNav = [
-  { label: "AGENDA", href: "#agenda" },
-  { label: "ENGAGEMENTS", href: "/engagements" },
-  { label: "RESEARCH", href: "/research" }
+export interface HeroContent {
+  eyebrow: string;
+  paragraph: string;
+  primaryCta: NavLink;
+  secondaryCta: NavLink;
+  image: string; // Explicit type allocation for your custom background asset
+  utilityLabel: string;
+}
+
+export interface MissionCardProps {
+  description: string;
+  href: string;
+  icon: 'satellite' | 'rocket' | 'star';
+  status: string;
+  statusTone: 'green' | 'blue' | 'gold';
+  title: string;
+}
+
+export interface SpectrumBarProps {
+  value: number;
+}
+
+export interface StatBlockProps {
+  label: string;
+  value: string;
+}
+
+export interface LaunchRowProps {
+  date: string;
+  detail: string;
+  href: string;
+  time: string;
+  title: string;
+}
+
+export interface DiscoveryContent {
+  archiveHref: string;
+  archiveLabel: string;
+  body: string;
+  cta: NavLink;
+  image: string;
+  label: string;
+  rangeEnd: string;
+  rangeStart: string;
+  title: string;
+}
+
+export interface NextDepartureContent {
+  allHref: string;
+  image: string;
+  label: string;
+  launchDate: string;
+  launchTime: string;
+  title: string;
+}
+
+export interface FooterMeta {
+  description: string;
+  title: string;
+}
+
+export const siteNav: NavLink[] = [
+  { label: 'Agenda', href: '#agenda' }, // ◄ Updated path targeting the home matrix scroll area
+  { label: 'Engagements', href: '/reports/' },
+  { label: 'News', href: '/news/' },
+  { label: 'Departures', href: '/departures/' },
+  { label: 'Technology', href: '/technology/' },
+  { label: 'Research', href: '/science/' },
+  { label: 'About', href: '/about/' },
 ];
 
-export const heroRightNav = [
-  { label: "TECHNOLOGY", href: "/technology" },
-  { label: "NEWS", href: "/news" },
-  { label: "ABOUT", href: "/about" }
+export const heroLeftNav: NavLink[] = [
+  { label: 'Agenda', href: '#agenda' }, // ◄ Updated path targeting the home matrix scroll area
+  { label: 'Engagements', href: '/reports/' },
+  { label: 'Research', href: '/science/' },
 ];
 
-export const mobileNav = [
-  { label: "AGENDA", href: "#agenda" },
-  { label: "ENGAGEMENTS", href: "/engagements" },
-  { label: "RESEARCH", href: "/research" },
-  { label: "TECHNOLOGY", href: "/technology" },
-  { label: "NEWS", href: "/news" },
-  { label: "ABOUT", href: "/about" }
+export const heroRightNav: NavLink[] = [
+  { label: 'Technology', href: '/technology/' },
+  { label: 'News', href: '/news/' },
+  { label: 'About', href: '/about/' },
 ];
 
-export const stats = [
-  { value: "194", label: "Monitored Sovereignties" },
-  { value: "24/7", label: "Chokepoint Surveillance" },
-  { value: "60+", label: "Active Bilateral Files" }
-];
+export const mobileNav: NavLink[] = [...heroLeftNav, ...heroRightNav];
 
-export const footerDirectory = [
-  {
-    title: "Intelligence",
-    links: [
-      { label: "Active Agenda", href: "#agenda" },
-      { label: "Bilateral Tracker", href: "/engagements" },
-      { label: "Research Repository", href: "/research" }
-    ]
+export const heroContent: HeroContent = {
+  eyebrow: 'BORDERS ARE DRAWN',
+  paragraph:
+    'Every border has a story. Every treaty has a price. DIPLOMATICC exists to read what others refuse to see.',
+  primaryCta: {
+    href: '#agenda', // ◄ Updated routing direction targeting your local grid container
+    label: 'View Agenda',
   },
-  {
-    title: "Platform",
-    links: [
-      { label: "Technology Stack", href: "/technology" },
-      { label: "Newsroom", href: "/news" },
-      { label: "About Think-Tank", href: "/about" }
-    ]
-  }
-];
-
-export const footerMeta = {
-  title: "DIPLOMATICC",
-  description: "Independent geopolitical intelligence and strategic policy analysis architecture.",
-  copyright: "© 2026 DIPLOMATICC. All operational matrices reserved."
+  secondaryCta: {
+    href: '/science/',
+    label: 'Our Research',
+  },
+  image: '/images/diplomatic-hero.jpg', // Links perfectly to your chess piece background asset
+  utilityLabel: 'EST. 2026', // Updated configuration year
 };
 
-export const footerPolicies = [
-  { label: "Terms of Access", href: "/terms" },
-  { label: "Intelligence Protocols", href: "/privacy" }
+export const stats: StatBlockProps[] = [
+  { value: '14', label: 'Active Briefings' },
+  { value: '4,200', label: 'Policy Papers' },
+  { value: '8', label: 'Summits Tracked' },
+  { value: '2.4B', label: 'Global Readers' },
 ];
+
+export const footerMeta: FooterMeta = {
+  title: 'DIPLOMATICC',
+  description:
+    'An independent geopolitical think-tank and policy analysis platform. Tracking global engagements, strategic priorities, and modern international relations.',
+};
+
+export const footerDirectory: NavLink[] = [...siteNav];
+
+export const footerPolicies: string[] = ['Privacy', 'Terms', 'Classified'];
