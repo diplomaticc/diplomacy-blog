@@ -1,122 +1,141 @@
-import { ShieldAlert, RefreshCw, FileText, ArrowUpRight, Globe } from 'lucide-react';
+import React from 'react';
 
-interface BriefingCard {
+interface AgendaItem {
   id: string;
-  title: string;
-  description: string;
   category: string;
-  status: 'diplomatic' | 'stabilizing' | 'strategic-pivot';
-  statusLabel: string;
-  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  status: string;
+  statusType: 'phase' | 'stabilizing' | 'partnership';
+  description: string;
+  destination: string;
+  vehicle: string;
+  link: string;
 }
 
-const strategicBriefings: BriefingCard[] = [
+const agendaData: AgendaItem[] = [
   {
-    id: 'b-1',
+    id: 'us-iran',
+    category: 'NUCLEAR DIPLOMACY',
     title: 'US–Iran Non-Proliferation Framework',
+    status: 'DIPLOMATIC PHASE',
+    statusType: 'phase',
     description: 'Tentative agreement reached to open the Strait of Hormuz. High-stakes negotiations are finalized to continue for a 60-day diplomatic window amid phrase restructuring.',
-    category: 'Nuclear Diplomacy',
-    status: 'diplomatic',
-    statusLabel: 'DIPLOMATIC PHASE',
-    icon: RefreshCw,
+    destination: 'Persian Gulf, Strait of Hormuz',
+    vehicle: 'Multilateral Diplomatic Framework',
+    link: '#',
   },
   {
-    id: 'b-2',
+    id: 'wash-delhi',
+    category: 'BILATERAL SECURITY',
     title: 'Washington–New Delhi Strategic Alignment',
+    status: 'STABILIZING',
+    statusType: 'stabilizing',
     description: 'Following high-level bilateral summits in New Delhi, a temporary trade framework has been established to ease tariff barriers and secure American energy imports.',
-    category: 'Bilateral Security',
-    status: 'stabilizing',
-    statusLabel: 'STABILIZING',
-    icon: ShieldAlert,
+    destination: 'Indo-Pacific Transit Sectors',
+    vehicle: 'Bilateral Defense Logistics Pact',
+    link: '#',
   },
   {
-    id: 'b-3',
+    id: 'india-viet',
+    category: 'REGIONAL COALITION',
     title: 'India–Vietnam Maritime Coalition',
+    status: 'ENHANCED PARTNERSHIP',
+    statusType: 'partnership',
     description: 'Bilateral ties elevated to an Enhanced Comprehensive Strategic Partnership targeting a $25B defense and technology trade framework by 2030.',
-    category: 'Regional Coalition',
-    status: 'strategic-pivot',
-    statusLabel: 'ENHANCED PARTNERSHIP',
-    icon: FileText,
+    destination: 'South China Sea Surveillance Arc',
+    vehicle: 'Joint Strategic Maritime Array',
+    link: '#',
   },
 ];
 
-const statusStyles = {
-  diplomatic: 'bg-blue-950/40 text-blue-400 border-blue-500/20',
-  stabilizing: 'bg-emerald-950/40 text-emerald-400 border-emerald-500/20',
-  'strategic-pivot': 'bg-purple-950/40 text-purple-400 border-purple-500/20',
-};
-
 export default function ActiveAgenda() {
   return (
-    <section className="bg-[#060a12] py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-900">
-      <div className="mx-auto max-w-7xl">
+    <section class="bg-[#060a12] py-20 px-4 border-t border-zinc-800/40">
+      <div class="max-w-7xl mx-auto">
         
-        <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-blue-400">
-              <Globe size={14} className="animate-pulse" />
-              <span className="font-display text-[10px] font-bold uppercase tracking-[0.25em]">
-                Strategic Intelligence Matrix
-              </span>
-            </div>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">
+        {/* Header Block */}
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="text-[10px] font-bold tracking-widest text-blue-500 uppercase block mb-2">
+              🌐 Strategic Intelligence Matrix
+            </span>
+            <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight font-display">
               Active Agenda
             </h2>
           </div>
-          
-          <a
-            href="/briefings"
-            className="group inline-flex items-center gap-2 font-display text-[11px] uppercase tracking-[0.2em] text-slate-400 transition-colors duration-300 hover:text-blue-400"
-          >
-            View All Intelligence
-            <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <a href="/research" class="text-xs font-bold tracking-widest text-zinc-400 hover:text-white uppercase transition-colors flex items-center gap-2">
+            View All Intelligence <span class="text-sm">↗</span>
           </a>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {strategicBriefings.map((briefing) => {
-            const IconComponent = briefing.icon;
-            
-            return (
-              <article
-                key={briefing.id}
-                className="relative flex flex-col justify-between border border-slate-800/60 bg-[#0b1320]/50 p-8 backdrop-blur-sm transition-all duration-300 hover:border-slate-700 hover:bg-[#0b1320]/80"
-              >
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <div className="rounded-md border border-slate-800 bg-[#060a12] p-2.5 text-slate-400">
-                      <IconComponent className="h-5 w-5" />
-                    </div>
-                    <span className={`rounded-full border px-3 py-0.5 font-display text-[9px] font-bold tracking-widest ${statusStyles[briefing.status]}`}>
-                      {briefing.statusLabel}
-                    </span>
+        {/* Data Grid Matrix */}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {agendaData.map((item) => (
+            <div key={item.id} class="bg-[#0b121f]/40 border border-zinc-800/60 rounded-sm p-6 flex flex-col justify-between hover:border-blue-500/30 transition-all duration-300 group">
+              
+              <div>
+                {/* Badge Header Row */}
+                <div class="flex items-center justify-between mb-6">
+                  <div class="w-8 h-8 rounded-sm bg-zinc-800/30 border border-zinc-700/40 flex items-center justify-center text-zinc-400 group-hover:text-blue-400 transition-colors">
+                    {item.id === 'us-iran' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    )}
+                    {item.id === 'wash-delhi' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    )}
+                    {item.id === 'india-viet' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    )}
                   </div>
-
-                  <div className="space-y-3">
-                    <span className="block font-display text-[10px] uppercase tracking-wider text-slate-500">
-                      {briefing.category}
-                    </span>
-                    <h3 className="font-display text-xl font-semibold tracking-wide text-slate-100">
-                      {briefing.title}
-                    </h3>
-                    <p className="text-[14px] leading-relaxed font-light text-slate-400">
-                      {briefing.description}
-                    </p>
-                  </div>
+                  
+                  <span class={`text-[9px] font-bold tracking-widest px-2 py-1 rounded-sm border ${
+                    item.statusType === 'phase' ? 'text-blue-400 border-blue-500/20 bg-blue-500/5' :
+                    item.statusType === 'stabilizing' ? 'text-emerald-400 border-emerald-500/20 bg-emerald-500/5' :
+                    'text-purple-400 border-purple-500/20 bg-purple-500/5'
+                  }`}>
+                    {item.status}
+                  </span>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-slate-800/40">
-                  <a
-                    href={`/briefings/${briefing.id}`}
-                    className="group inline-flex items-center gap-2 font-display text-[10px] font-semibold uppercase tracking-widest text-blue-400 transition-colors duration-300 hover:text-blue-300"
-                  >
-                    Access Briefing File
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                  </a>
+                {/* Content Headings */}
+                <span class="text-[10px] font-bold tracking-wider text-zinc-500 uppercase block mb-1">
+                  {item.category}
+                </span>
+                <h3 class="text-xl font-bold text-white tracking-tight mb-4 group-hover:text-zinc-200 transition-colors">
+                  {item.title}
+                </h3>
+                <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-light">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Added Metadata Block Matching Your Screenshot Style */}
+              <div class="mt-4 pt-4 border-t border-zinc-800/40">
+                <div class="mb-3">
+                  <span class="text-[9px] font-bold tracking-widest text-blue-500 uppercase block mb-0.5">
+                    Destination
+                  </span>
+                  <span class="text-xs text-zinc-300 font-light">
+                    {item.destination}
+                  </span>
                 </div>
-              </article>
-            );
-          })}
+                <div class="mb-6">
+                  <span class="text-[9px] font-bold tracking-widest text-blue-500 uppercase block mb-0.5">
+                    Vehicle
+                  </span>
+                  <span class="text-xs text-zinc-300 font-light">
+                    {item.vehicle}
+                  </span>
+                </div>
+
+                {/* Bottom Action Link */}
+                <a href={item.link} class="text-[10px] font-bold tracking-widest text-blue-400 hover:text-blue-300 uppercase flex items-center gap-1 transition-colors">
+                  Access Briefing File <span class="text-xs group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+
+            </div>
+          ))}
         </div>
 
       </div>
