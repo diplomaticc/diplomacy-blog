@@ -5,7 +5,7 @@ status: "EN ROUTE"
 statusTone: "green"
 destination: "Indo-Pacific / South China Sea / Bay of Bengal"
 vehicle: "13 Bilateral MoUs + Annual India–Vietnam Maritime Security Dialogue (Track 1) + 2024–2028 Plan of Action"
-icon: "shield"
+icon: "satellite"
 order: 4
 missionWindow: "May 5–6, 2026"
 coverImage: "/images/mission-article-03.png"
