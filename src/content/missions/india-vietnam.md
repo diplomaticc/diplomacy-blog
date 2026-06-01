@@ -8,7 +8,7 @@ vehicle: "13 Bilateral MoUs + Annual India–Vietnam Maritime Security Dialogue 
 icon: "satellite"
 order: 4
 missionWindow: "May 5–6, 2026"
-coverImage: "/images/mission-article-03.png"
+coverImage: "/images/INDVIETNAM.jpg"
 ---
 
 ### Briefing Overview
