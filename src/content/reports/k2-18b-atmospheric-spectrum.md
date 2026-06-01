@@ -7,7 +7,7 @@ highlight: "13 MoUs signed"
 rangeStart: "Track 1 Baseline"
 rangeEnd: "2030 Target Horizon"
 image: "/images/INDVIETNAM.jpg"
-spectrumBars: [13, 25, 16, 40, 55, 70, 85, 100]
+spectrumBars: [13, 25, 16, 35, 45, 52, 64, 55, 75, 90, 100, 25]
 ---
 
 ### Summary
