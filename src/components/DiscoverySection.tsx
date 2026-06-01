@@ -1,5 +1,5 @@
 import { MotionConfig, motion, useInView } from 'framer-motion';
-import { ArrowRight, Telescope } from 'lucide-react';
+import { ArrowRight, Shield } from 'lucide-react'; // 🛠️ Telescope swapped out for Shield
 import { useRef } from 'react';
 
 import type { DiscoveryContent, SpectrumBarProps } from '../data/site';
@@ -54,7 +54,8 @@ export default function DiscoverySection({ bars, content }: DiscoverySectionProp
           >
             <div className="flex items-center justify-between gap-6">
               <div className="flex items-center gap-3 font-display text-[11px] uppercase tracking-[0.26em] text-warm-gold">
-                <Telescope size={16} strokeWidth={1.6} />
+                {/* 🛠️ Replaced icon with a defense/strategic layout indicator */}
+                <Shield size={16} strokeWidth={1.6} />
                 <span>{content.label}</span>
               </div>
               <a
@@ -93,8 +94,9 @@ export default function DiscoverySection({ bars, content }: DiscoverySectionProp
             transition={fadeUpTransition}
             className="discovery-chart-card border border-white/20 p-6 backdrop-blur-md sm:p-8"
           >
+            {/* 🛠️ Re-labeled from "Spectral Analysis" */}
             <div className="discovery-meta font-display text-[11px] uppercase tracking-[0.28em]">
-              Spectral Analysis
+              Strategic Vector Matrix
             </div>
             <div className="mt-8 grid h-44 grid-cols-12 items-end gap-2 sm:mt-10 sm:h-52 sm:gap-3">
               {bars.map((bar, index) => (
