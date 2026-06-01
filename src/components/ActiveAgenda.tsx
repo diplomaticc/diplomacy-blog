@@ -22,7 +22,7 @@ const agendaData: AgendaItem[] = [
     description: 'Tentative agreement reached to open the Strait of Hormuz. High-stakes negotiations are finalized to continue for a 60-day diplomatic window amid phrase restructuring.',
     destination: 'Persian Gulf, Strait of Hormuz',
     vehicle: 'Multilateral Diplomatic Framework',
-    link: '#',
+    link: '/missions/us-iran-nuclear/', // 🌐 Routes directly to your us-iran-nuclear.md file
   },
   {
     id: 'wash-delhi',
@@ -33,7 +33,7 @@ const agendaData: AgendaItem[] = [
     description: 'Following high-level bilateral summits in New Delhi, a temporary trade framework has been established to ease tariff barriers and secure American energy imports.',
     destination: 'Indo-Pacific Transit Sectors',
     vehicle: 'Bilateral Defense Logistics Pact',
-    link: '#',
+    link: '/missions/washington-new-delhi/', // 🌐 Routes directly to your washington-new-delhi.md file
   },
   {
     id: 'india-viet',
@@ -44,7 +44,7 @@ const agendaData: AgendaItem[] = [
     description: 'Bilateral ties elevated to an Enhanced Comprehensive Strategic Partnership targeting a $25B defense and technology trade framework by 2030.',
     destination: 'South China Sea Surveillance Arc',
     vehicle: 'Joint Strategic Maritime Array',
-    link: '#',
+    link: '/missions/india-vietnam/', // 🌐 Routes directly to your india-vietnam.md file
   },
 ];
 
@@ -72,7 +72,7 @@ export default function ActiveAgenda() {
             </h2>
           </div>
           
-          {/* 🛠️ FIXED: Redirects directly to your Active Missions collection archive */}
+          {/* FIXED: Redirects directly to your Active Missions collection archive */}
           <a href="/missions/" class="text-xs font-bold tracking-widest text-zinc-400 hover:text-white uppercase transition-colors flex items-center gap-2">
             View All Intelligence <span class="text-sm">↗</span>
           </a>
@@ -136,6 +136,7 @@ export default function ActiveAgenda() {
                   </span>
                 </div>
 
+                {/* Technical brief routing engine links */}
                 <a href={item.link} class="text-[10px] font-bold tracking-widest text-blue-400 hover:text-blue-300 uppercase flex items-center gap-1 transition-colors">
                   Access Briefing File <span class="text-xs group-hover:translate-x-1 transition-transform">→</span>
                 </a>
