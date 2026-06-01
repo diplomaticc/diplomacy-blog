@@ -5,7 +5,7 @@ import type { StatBlockProps } from '../data/site';
 import { aeonEase } from './motion';
 
 interface StatsSectionProps {
-  stats: StatBlockProps[];
+  stats?: StatBlockProps[]; // 🛠️ Made optional to support clean hardcoding
 }
 
 function parseStatValue(value: string) {
@@ -88,13 +88,33 @@ function StatBlock({ index, label, value }: StatBlockProps & { index: number }) 
 }
 
 export default function StatsSection({ stats }: StatsSectionProps) {
+  // 🛠️ Hardcoded your diplomatic matrix to safely match your regex parser engine (e.g. 25B, 16B)
+  const diplomaticStats = [
+    {
+      value: '13',
+      label: 'MoUs Signed',
+    },
+    {
+      value: '25B',
+      label: 'Trade Target (USD / 2030)',
+    },
+    {
+      value: '16B',
+      label: 'Current Baseline (USD)',
+    },
+    {
+      value: '2026',
+      label: 'Upgrade Date',
+    },
+  ];
+
   return (
     <MotionConfig reducedMotion="user">
       <section id="science" className="bg-page-bg py-18 sm:py-22">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="grid gap-y-12 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat, index) => (
-              <StatBlock key={stat.label} index={index} {...stat} />
+            {diplomaticStats.map((stat, index) => (
+              <StatBlock key={stat.label} index={index} value={stat.value} label={stat.label} />
             ))}
           </div>
         </div>
