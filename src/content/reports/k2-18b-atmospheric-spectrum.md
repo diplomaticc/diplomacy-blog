@@ -1,11 +1,13 @@
 ---
 title: "INDIA–VIETNAM / MARITIME COALITION"
+label: "Latest Strategic Report"
 summary: "Our diplomatic network has elevated India–Vietnam ties to an Enhanced Comprehensive Strategic Partnership, with a $25 billion trade target by 2030 and expanded cooperation across defense, maritime security, digital payments, and rare earths."
-published: "May 6, 2026"
+publishedAt: 2026-05-06
 highlight: "13 MoUs signed"
-rangeStart: 0.5
-rangeEnd: 5.0
+rangeStart: "Track 1 Baseline"
+rangeEnd: "2030 Target Horizon"
 image: "/images/INDVIETNAM.jpg"
+spectrumBars: [13, 25, 16, 40, 55, 70, 85, 100]
 ---
 
 ### Summary
