@@ -7,8 +7,8 @@ import LaunchCountdown from './LaunchCountdown';
 import { aeonEase, fadeUpTransition, inViewViewport } from './motion';
 
 interface DepartureSectionProps {
-  content?: NextDepartureContent; // Made optional to support clean hardcoding
-  launches?: LaunchRowProps[];     // Made optional to support clean hardcoding
+  content?: NextDepartureContent;
+  launches?: LaunchRowProps[];
 }
 
 function PolicyRow({ date, detail, href, index, time, title }: any) {
@@ -45,28 +45,28 @@ function PolicyRow({ date, detail, href, index, time, title }: any) {
 }
 
 export default function DepartureSection({ content, launches }: DepartureSectionProps) {
-  // 🛠️ Hardcoded Diplomatic Framework Timeline (Option 2)
+  // 🛠️ Hardcoded Diplomatic Framework Timeline with updated links
   const policyDeadlines = [
     {
       date: 'OCT 18, 2026',
       time: '04:20 UTC',
       title: 'Supply Chain Resilience Accord',
       detail: 'Critical mineral sourcing protocols and raw transit corridors go into full operational effect across all signatory zones.',
-      href: '/reports/k2-18b-atmospheric-spectrum/', // Links to your updated India-Vietnam matrix report
+      href: '/departures/', // 🔗 Updated Link
     },
     {
       date: 'MAR 12, 2027',
       time: '09:10 UTC',
       title: 'Digital Currency Framework',
       detail: 'Bilateral interbank clearing networks go live, streamlining cryptographic transactional settlement protocols between regions.',
-      href: '#',
+      href: '/departures/', // 🔗 Updated Link
     },
     {
       date: 'AUG 05, 2027',
       time: '13:45 UTC',
       title: 'Maritime Boundaries Convention',
       detail: 'Full enforcement of updated Exclusive Economic Zone boundaries and multi-lateral naval tracking synchronization loops.',
-      href: '#',
+      href: '/departures/', // 🔗 Updated Link
     },
   ];
 
@@ -84,7 +84,6 @@ export default function DepartureSection({ content, launches }: DepartureSection
             className="group relative overflow-hidden"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              {/* Uses your uploaded high-res delegation asset for continuity */}
               <img
                 src="/images/INDVIETNAM.jpg"
                 alt="Featured treaty window"
@@ -96,7 +95,6 @@ export default function DepartureSection({ content, launches }: DepartureSection
                 <div className="departure-meta font-display text-[10px] uppercase tracking-[0.24em] text-emerald-400">
                   Enforcement Countdown
                 </div>
-                {/* Feeds your target values down into your existing clock engine smoothly */}
                 <LaunchCountdown
                   launchDate="2026-10-18"
                   launchTime="04:20"
@@ -114,8 +112,9 @@ export default function DepartureSection({ content, launches }: DepartureSection
             transition={fadeUpTransition}
           >
             <div>
+              {/* 🔗 Updated Link Below */}
               <a
-                href="/reports/"
+                href="/departures/"
                 className="departure-meta group mb-5 hidden items-center gap-2 font-display text-[12px] uppercase tracking-[0.24em] transition-colors duration-300 hover:text-white md:inline-flex"
               >
                 View Horizon Timeline
