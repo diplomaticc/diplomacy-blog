@@ -45,28 +45,28 @@ function PolicyRow({ date, detail, href, index, time, title }: any) {
 }
 
 export default function DepartureSection({ content, launches }: DepartureSectionProps) {
-  // 🛠️ Hardcoded Diplomatic Framework Timeline with updated links
+  // 🛠️ Hardcoded Diplomatic Framework Timeline with updated factual CBDC data
   const policyDeadlines = [
     {
       date: 'OCT 18, 2026',
       time: '04:20 UTC',
       title: 'Supply Chain Resilience Accord',
       detail: 'Critical mineral sourcing protocols and raw transit corridors go into full operational effect across all signatory zones.',
-      href: '/departures/', // 🔗 Updated Link
+      href: '/departures/', 
     },
     {
-      date: 'MAR 12, 2027',
-      time: '09:10 UTC',
-      title: 'Digital Currency Framework',
-      detail: 'Bilateral interbank clearing networks go live, streamlining cryptographic transactional settlement protocols between regions.',
-      href: '/departures/', // 🔗 Updated Link
+      date: 'JUN 15, 2027', // 🔄 Updated Date
+      time: '09:00 UTC',    // 🔄 Updated Time
+      title: 'Cross-Border CBDC Integration', // 🔄 Updated Title
+      detail: 'Bilateral interbank clearing networks are being developed to streamline cryptographic transactional settlement protocols between regions.', // 🔄 Updated Detail
+      href: '/departures/', 
     },
     {
       date: 'AUG 05, 2027',
       time: '13:45 UTC',
       title: 'Maritime Boundaries Convention',
       detail: 'Full enforcement of updated Exclusive Economic Zone boundaries and multi-lateral naval tracking synchronization loops.',
-      href: '/departures/', // 🔗 Updated Link
+      href: '/departures/', 
     },
   ];
 
@@ -112,7 +112,6 @@ export default function DepartureSection({ content, launches }: DepartureSection
             transition={fadeUpTransition}
           >
             <div>
-              {/* 🔗 Updated Link Below */}
               <a
                 href="/departures/"
                 className="departure-meta group mb-5 hidden items-center gap-2 font-display text-[12px] uppercase tracking-[0.24em] transition-colors duration-300 hover:text-white md:inline-flex"
