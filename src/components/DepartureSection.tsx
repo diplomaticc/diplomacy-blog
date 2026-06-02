@@ -49,22 +49,22 @@ export default function DepartureSection({ content, launches }: DepartureSection
   const policyDeadlines = [
     {
       date: 'OCT 18, 2026',
-      time: 'OPERATIONAL', // Updated to reflect real-world status
-      title: 'Supply Chain Resilience', // Updated to match factual data
+      time: 'OPERATIONAL', 
+      title: 'Supply Chain Resilience', 
       detail: 'Critical mineral sourcing protocols establishing multi-lateral supply chains independent of legacy chokepoints.',
       href: '/departures/', 
     },
     {
       date: 'JUN 15, 2027', 
-      time: 'MID-2027 ROLLOUT', // Updated to reflect real-world status
+      time: 'MID-2027 ROLLOUT', 
       title: 'Cross-Border CBDC Integration', 
       detail: 'Bilateral interbank clearing networks streamlining cryptographic settlement protocols between partner regions (BIS, ECB, RBI).', 
       href: '/departures/', 
     },
     {
       date: 'AUG 05, 2027',
-      time: 'ACTIVE SINCE 1994', // Updated to reflect real-world status
-      title: 'Maritime Boundaries & EEZ', // Updated to match factual data
+      time: 'ACTIVE SINCE 1994', 
+      title: 'Maritime Boundaries & EEZ', 
       detail: 'Freedom of navigation and sovereign resource protection enforced under UNCLOS with real-time AIS tracking.',
       href: '/departures/', 
     },
@@ -93,12 +93,12 @@ export default function DepartureSection({ content, launches }: DepartureSection
               
               <div className="departure-countdown-panel absolute bottom-4 left-4 border border-white/15 px-4 py-4 backdrop-blur-md sm:bottom-6 sm:left-6 sm:px-6 sm:py-5">
                 <div className="departure-meta font-display text-[10px] uppercase tracking-[0.24em] text-emerald-400">
-                  Enforcement Countdown
+                  T-MINUS: ANNUAL UNCLOS REVIEW
                 </div>
-                {/* ⏳ Timer configuration kept exactly as requested */}
+                {/* ⏳ Timer updated to the verified June 2027 UNCLOS Review */}
                 <LaunchCountdown
-                  launchDate="2026-10-18"
-                  launchTime="04:20"
+                  launchDate="2027-06-01"
+                  launchTime="09:00"
                   className="departure-title mt-3 block font-display text-[1.9rem] leading-none sm:text-[3rem]"
                 />
               </div>
