@@ -5,7 +5,7 @@ launchDate: 2027-06-15
 launchTime: "09:00"
 launchSite: "Global CBDC Pilot Networks"
 missionWindow: "Phase 1 Rollout"
-image: "/images/INDVIETNAM.jpg"
+image: "/images/CBDC.jpg"
 order: 2
 ---
 
