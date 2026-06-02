@@ -62,7 +62,8 @@ export default function DepartureSection({ content, launches }: DepartureSection
       href: '/departures/', 
     },
     {
-      date: 'AUG 05, 2027',
+      // 🔄 Fixed! Now perfectly matches the UNCLOS Annual Review timer
+      date: 'JUN 01, 2027', 
       time: 'ACTIVE SINCE 1994', 
       title: 'Maritime Boundaries & EEZ', 
       detail: 'Freedom of navigation and sovereign resource protection enforced under UNCLOS with real-time AIS tracking.',
