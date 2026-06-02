@@ -1,21 +1,11 @@
 ---
-title: Ares Interceptor
-detail: Mars Surface Rover
+title: "Digital Currency Framework"
+detail: "Bilateral interbank clearing networks"
 launchDate: 2027-03-12
-launchTime: 09:10
-image: /images/departures-article-02.png
-launchSite: Launch Complex 39A, Cape Canaveral
-missionWindow: 09:10 UTC window
-order: 2
+launchTime: "09:10 UTC"
+launchSite: "Global Digital Exchange"
+missionWindow: "Phase 1 Rollout"
+image: "/images/INDVIETNAM.jpg"
 ---
-## Launch Objective
 
-Ares Interceptor delivers AEON's next-generation Mars rover with upgraded autonomous hazard routing, subsurface thermal drills, and a redesigned sample preservation system.
-
-## Readiness Notes
-
-The launch stack is in final avionics checkout and surface relay compatibility testing is underway. Navigation teams are validating revised entry timing against updated atmospheric models.
-
-## Why It Matters
-
-The rover is meant to bridge exploration and infrastructure, identifying future crew-safe traverses while expanding the dataset for in-situ resource extraction planning.
+Bilateral interbank clearing networks go live, streamlining cryptographic transactional settlement protocols between regions. This bypasses traditional SWIFT delays and enhances direct trade liquidity.
