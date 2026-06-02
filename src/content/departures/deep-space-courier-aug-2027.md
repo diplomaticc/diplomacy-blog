@@ -1,12 +1,27 @@
 ---
-title: "Maritime Boundaries Convention"
-detail: "Exclusive Economic Zone enforcement"
-launchDate: 2027-08-05
-launchTime: "13:45"
-launchSite: "South China Sea & Bay of Bengal"
-missionWindow: "Permanent Enforcement"
+title: "Maritime Boundaries & EEZ Enforcement"
+detail: "Exclusive Economic Zone (EEZ) Protection"
+launchDate: 2027-06-01
+launchTime: "09:00"
+launchSite: "Bay of Bengal - South China Sea - Indian Ocean"
+missionWindow: "Permanent Ongoing Enforcement"
 image: "/images/INDVIETNAM.jpg"
 order: 3
 ---
 
-Full enforcement of updated Exclusive Economic Zone boundaries and multi-lateral naval tracking synchronization loops. Ensures freedom of navigation and protects sovereign resource extraction rights.
+**Status:** Active Under UNCLOS (Since 1994)  
+**Next Major Milestone:** UNCLOS Annual Meeting of States Parties  
+**Location:** United Nations, New York  
+
+### What This Framework Does
+Full recognition and enforcement of Exclusive Economic Zone (EEZ) boundaries under UNCLOS. This enables:
+* **Multi-lateral naval tracking coordination** between partner nations.
+* **Freedom of navigation assurance** in international waters.
+* **Protection of sovereign resource extraction rights** (fishing, minerals, energy).
+* **Real-time maritime domain awareness** via AIS satellite tracking.
+
+### Key Verified Facts
+* **UNCLOS Ratification:** 168+ countries ratified since 1994.
+* **India's EEZ Area:** ~2.02 million km² (Bay of Bengal + Arabian Sea).
+* **Indian Navy Patrols:** Active in Bay of Bengal & Indian Ocean.
+* **Ship Tracking:** AIS + Satellite networks operational globally.
