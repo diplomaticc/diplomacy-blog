@@ -85,9 +85,9 @@ export default function DepartureSection({ content, launches }: DepartureSection
             className="group relative overflow-hidden"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              {/* 🖼️ Updated to use the official UNCLOS image */}
+              {/* 🖼️ Updated to use the officially cropped UNCLOS image */}
               <img
-                src="/images/AZ9A9152.jpg"
+                src="/images/UNCLOS-cropped.jpg"
                 alt="UNCLOS Conference Panel"
                 className="h-full w-full object-cover grayscale transition duration-700 group-hover:grayscale-0"
               />
