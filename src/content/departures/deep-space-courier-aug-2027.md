@@ -5,7 +5,7 @@ launchDate: 2027-06-01
 launchTime: "09:00"
 launchSite: "Bay of Bengal - South China Sea - Indian Ocean"
 missionWindow: "Permanent Ongoing Enforcement"
-image: "/images/INDVIETNAM.jpg"
+image: "/images/UNCLOS-maritime-zones-1.png"
 order: 3
 ---
 
