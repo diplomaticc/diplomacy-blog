@@ -85,9 +85,9 @@ export default function DepartureSection({ content, launches }: DepartureSection
             className="group relative overflow-hidden"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              {/* 🖼️ Updated to use the officially cropped UNCLOS image */}
+              {/* 🖼️ Fixed: Changed .jpg to .png to perfectly match your uploaded file! */}
               <img
-                src="/images/UNCLOS-cropped.jpg"
+                src="/images/UNCLOS-cropped.png"
                 alt="UNCLOS Conference Panel"
                 className="h-full w-full object-cover grayscale transition duration-700 group-hover:grayscale-0"
               />
