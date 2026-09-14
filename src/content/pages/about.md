@@ -1,30 +1,30 @@
 ---
-title: About AEON
-summary: AEON is a fictional government-backed deep space exploration agency built around disciplined engineering, long-range science, and the infrastructure required to keep ambitious missions alive far from Earth.
-eyebrow: Agency Profile
+title: About DIPLOMATICC
+summary: DIPLOMATICC is an independent platform for geopolitical analysis — tracking treaties, summits, and shifting alignments, then explaining what they cost and who they bind.
+eyebrow: Editorial Profile
 image: /images/singleton-about.png
 highlights:
   - label: Mandate
-    value: Expand human reach beyond the heliosphere through sustained exploration and systems infrastructure.
-  - label: Operating Model
-    value: Publicly funded, mission-first, with long-horizon science and logistics treated as one continuous program.
+    value: Read the primary documents others summarise, and report what the text actually commits states to do.
+  - label: Method
+    value: Long-form analysis tied to sources — treaty language, official statements, and the public record.
   - label: Established
-    value: '2024'
+    value: '2026'
 ---
-AEON was founded to solve a practical problem disguised as a philosophical one: if humanity intends to travel farther, it needs institutions that can think farther. Deep space exploration is not only about singular launches or headline discoveries. It is about maintaining capability across decades, distances, and uncertain conditions.
+Every border has a story. Every treaty has a price. DIPLOMATICC exists to read what others refuse to see.
 
-## What AEON is built to do
+Most coverage of international affairs stops at the announcement: a summit concluded, a framework signed, a partnership "elevated." What rarely follows is the harder question — what was actually conceded, by whom, and what happens when the terms come due.
 
-The agency combines mission operations, advanced systems research, launch coordination, scientific analysis, and long-duration logistics under one command structure. That model keeps discovery tied to infrastructure. It also prevents exploratory missions from becoming isolated demonstrations that cannot scale into durable programs.
+## What we cover
 
-AEON treats every mission as part of a larger lattice. A probe, a habitat, a relay array, and a launch vehicle are all pieces of the same operating system.
+The work is organised around active files rather than daily headlines. A negotiation, a bilateral realignment, or a regional coalition stays open on the agenda until it resolves, which means coverage follows the same file across months instead of resetting with each news cycle.
 
-## Institutional approach
+Alongside that, longer engagements examine the structures underneath: how trade and energy dependencies shape bargaining power, why certain security arrangements hold and others quietly lapse, and where formal commitments diverge from behaviour.
 
-Public accountability matters to the agency's identity. AEON publishes science reports, operational summaries, and mission briefs so that each advance can be understood in context rather than reduced to spectacle. The goal is to build legitimacy through rigor and transparency.
+## How we work
 
-That discipline extends inward as well. Mission planning is intentionally conservative at the systems level so the agency can be ambitious at the exploration level.
+Analysis starts from primary material — treaty text, official readouts, published data — rather than from secondary commentary. Where a conclusion is an inference, it is presented as one. Where the record is incomplete or contested, that gap is stated plainly rather than smoothed over.
 
-## Long-range view
+## Independence
 
-AEON's long-term work focuses on three fronts: resilient communications, autonomous science in remote environments, and the logistics needed to keep human and robotic missions moving together. The agency believes the next era of exploration belongs to organizations that can sustain presence, not just reach it once.
+DIPLOMATICC is independent. It is not aligned with a government, party, or institutional funder, and it takes no position it cannot defend from the public record. The intent is not neutrality for its own sake, but analysis a reader can check.

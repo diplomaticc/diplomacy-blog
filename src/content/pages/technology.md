@@ -1,32 +1,30 @@
 ---
-title: Technology Framework
-summary: AEON's technology portfolio is organized around vehicles, autonomous systems, relay infrastructure, and the industrial discipline needed to support missions that cannot afford brittle hardware.
+title: Technology & Statecraft
+summary: Semiconductors, AI, cyber capability, and energy infrastructure have become instruments of foreign policy. DIPLOMATICC tracks how states use technology as leverage — and what that leverage costs.
 eyebrow: Technology
 image: /images/singleton-technology.png
 highlights:
   - label: Priority Stack
-    value: Launch vehicles, deep-space relays, autonomous robotics, and hardened sensing systems.
-  - label: Design Principle
-    value: Graceful degradation. Systems must remain useful even when conditions stop being ideal.
-  - label: Deployment Horizon
-    value: 2026-2027 orbital, lunar, Martian, and deep-space missions.
+    value: Semiconductor supply chains, AI governance, cyber and information operations, and energy infrastructure.
+  - label: Analytical Principle
+    value: Follow the dependency. Capability matters less than who controls the chokepoint.
+  - label: Coverage Horizon
+    value: Export controls, standards bodies, and infrastructure agreements now under negotiation.
 ---
-AEON develops technology as an operational layer, not a showroom. Every platform must survive long communication delays, partial failures, and mission conditions that cannot be patched in real time.
+Technology policy is foreign policy. Export controls, standards-setting, and infrastructure financing now do work that once required treaties or fleets, and they do it with far less public scrutiny.
 
-## Vehicle architecture
+## Chokepoints, not capabilities
 
-Launch systems are designed around modular payload interfaces so the agency can move science, infrastructure, and logistics hardware without rebuilding the full stack for every departure. That speeds up campaign planning and lowers integration risk across consecutive launch windows.
+Raw capability is a poor predictor of influence. What matters is the narrow point in a supply chain that one party controls and others cannot route around — a lithography step, a refining capacity, a cable landing, a payments rail. Mapping those chokepoints explains outcomes that stated policy does not.
 
-The same logic shapes orbital insertion modules and transfer stages. AEON prefers architectures that accept multiple mission profiles over highly specialized hardware that only performs well inside one narrow envelope.
+This is why export controls have become a primary instrument of statecraft. They convert a technical dependency into a negotiating position, and they are extremely difficult to reverse once trading partners begin building alternatives.
 
-## Autonomy and robotics
+## Rules written elsewhere
 
-Deep-space operations require machines that can interpret degraded signals, navigate uncertainty, and continue useful work when communication with Earth is delayed. AEON's robotics program therefore prioritizes decision support, terrain interpretation, and adaptive sampling rather than decorative autonomy claims.
+A great deal of consequential policy is set in standards bodies, licensing regimes, and procurement rules rather than in public agreements. These venues are slow, technical, and largely unreported — which is precisely why the commitments made in them tend to hold longer than the ones announced at summits.
 
-Autonomy is treated as a risk-management tool. The more effectively a vehicle can stabilize itself and preserve mission intent, the more aggressive the agency can be with distance and duration.
+The same applies to AI governance. The operative question is not which principles are declared, but which compute, data, and model-access arrangements are actually enforceable, and by whom.
 
-## Relay and observation systems
+## Infrastructure as commitment
 
-Communications are mission hardware. AEON's relay architecture is built to extend telemetry confidence, command resiliency, and data continuity across multiple active theaters. The agency pairs that with observation arrays that can validate events, track anomalies, and preserve scientific context over long campaigns.
-
-That combination turns isolated missions into a connected program with shared awareness.
+Pipelines, ports, cables, and grid interconnections are among the most binding commitments a state can make. They take years to build, decades to amortise, and cannot be withdrawn the way a statement can. Where infrastructure agreements are signed — and who finances them — is often the clearest available signal of where an alignment is genuinely heading.

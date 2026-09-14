@@ -1,30 +1,30 @@
 ---
-title: Science Programs
-summary: AEON's science program spans planetary survey, atmospheric analysis, heliophysics, and subsurface exploration, with each campaign designed to produce reusable knowledge for the next wave of missions.
-eyebrow: Science Directorate
+title: Research
+summary: DIPLOMATICC's research examines the structures beneath the headlines — treaty architecture, regional security arrangements, and the trade and energy dependencies that decide who has leverage.
+eyebrow: Research Desk
 image: /images/singleton-science.png
 highlights:
   - label: Focus Areas
-    value: Planetary habitability, heliosphere mapping, cryogenic oceans, and solar event analysis.
+    value: Treaty architecture, regional security, trade and energy dependency, and the machinery of negotiation.
   - label: Method
-    value: Pair every flagship discovery with data pipelines, repeatable instrumentation, and open technical reporting.
+    value: Primary sources first — treaty language, official readouts, and published data, cited so readers can verify.
   - label: Output
-    value: Reports, mission briefings, observation archives, and downstream design changes for future launches.
+    value: Long-form engagements, policy briefs, and the running analysis behind each active file.
 ---
-AEON's scientific work starts with a simple premise: data is only valuable if it changes what the agency can do next. That means research priorities are chosen not only for novelty, but for how well they strengthen mission planning and future discovery.
+Research here is judged by one test: does it change how you read the next announcement?
 
-## Discovery with continuity
+A summit communiqué is easy to report and difficult to interpret. Interpretation requires knowing what the same parties agreed to before, which commitments were quietly dropped, and what leverage each side actually holds. That background is what the research desk exists to build.
 
-Flagship discoveries attract attention, but the agency is structured to turn those moments into sustained programs. A spectral signature leads to improved instrumentation. A subsurface anomaly shapes the next sampling protocol. A solar event model changes how crewed vehicles are shielded and routed.
+## Continuity over novelty
 
-This is how AEON keeps science from becoming disconnected from engineering reality.
+Active files are not closed when the news cycle moves on. A framework signed under time pressure creates obligations that come due later, and those later moments are usually where the real terms become visible. Following a file end to end is how a single agreement becomes a usable precedent for reading the next one.
 
-## Core disciplines
+## Core areas
 
-The current science portfolio centers on exoplanet atmospheres, icy moon environments, solar magnetic behavior, and long-baseline observation of the outer system. Each area feeds a different layer of the agency's roadmap, from remote sensing to crew safety to autonomous exploration.
+The portfolio centres on four questions. How treaty language distributes obligation and escape routes. How regional security arrangements hold together, or fail to. How trade and energy dependencies translate into bargaining power. And how negotiation itself is conducted — timing, sequencing, and the use of deadlines as instruments.
 
-The portfolio is intentionally broad, but not unfocused. AEON invests where new knowledge can materially alter its ability to travel farther, observe better, or survive longer.
+These areas are deliberately connected. A trade dependency is rarely separable from a security commitment, and treating them separately is how analysts miss what a deal was really about.
 
-## Publishing and review
+## Sourcing and revision
 
-Every major campaign is expected to produce public-facing reports and internally actionable technical briefs. That publication rhythm matters. It creates traceability between observation, interpretation, and design decisions, which is critical for any agency operating on long time horizons.
+Every substantial piece cites the material it rests on. When new information contradicts an earlier read, the correction is published rather than buried — a running analysis is only credible if it is willing to be wrong in public.
