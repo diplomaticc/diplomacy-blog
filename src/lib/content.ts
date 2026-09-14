@@ -69,7 +69,7 @@ export function toMissionCard(entry: MissionEntry): MissionCardProps {
     status: entry.data.status,
     statusTone: entry.data.statusTone,
     icon: entry.data.icon,
-    href: `/missions/${entry.id}/`,
+    href: `/agenda/${entry.id}/`,
   };
 }
 

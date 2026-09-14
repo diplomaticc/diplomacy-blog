@@ -65,19 +65,19 @@ export interface FooterMeta {
 }
 
 export const siteNav: NavLink[] = [
-  { label: 'Agenda', href: '/missions/' }, // ◄ Restored to missions subpage route
+  { label: 'Agenda', href: '/agenda/' },
   { label: 'Engagements', href: '/reports/' },
   { label: 'News', href: '/news/' },
   { label: 'Departures', href: '/departures/' },
   { label: 'Technology', href: '/technology/' },
-  { label: 'Research', href: '/science/' },
+  { label: 'Research', href: '/research/' },
   { label: 'About', href: '/about/' },
 ];
 
 export const heroLeftNav: NavLink[] = [
-  { label: 'Agenda', href: '/missions/' }, // ◄ Restored to missions subpage route
+  { label: 'Agenda', href: '/agenda/' },
   { label: 'Engagements', href: '/reports/' },
-  { label: 'Research', href: '/science/' },
+  { label: 'Research', href: '/research/' },
 ];
 
 export const heroRightNav: NavLink[] = [
@@ -93,11 +93,11 @@ export const heroContent: HeroContent = {
   paragraph:
     'Every border has a story. Every treaty has a price. DIPLOMATICC exists to read what others refuse to see.',
   primaryCta: {
-    href: '/missions/', // ◄ Restored to missions subpage route
+    href: '/agenda/',
     label: 'View Agenda',
   },
   secondaryCta: {
-    href: '/science/',
+    href: '/research/',
     label: 'Our Research',
   },
   image: '/images/diplomatic-hero.jpg',
