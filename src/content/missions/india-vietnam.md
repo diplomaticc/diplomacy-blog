@@ -3,11 +3,11 @@ title: "India–Vietnam Maritime Coalition"
 summary: "Bilateral ties elevated to an Enhanced Comprehensive Strategic Partnership during President Tô Lâm's state visit to New Delhi (May 5–6, 2026), targeting a $25 billion trade framework by 2030 with 13 MoUs signed covering defense, rare earth minerals, digital payments, submarine search-and-rescue, and Indo-Pacific maritime security cooperation."
 status: "EN ROUTE"
 statusTone: "green"
-destination: "Indo-Pacific / South China Sea / Bay of Bengal"
-vehicle: "13 Bilateral MoUs + Annual India–Vietnam Maritime Security Dialogue (Track 1) + 2024–2028 Plan of Action"
+region: "Indo-Pacific / South China Sea / Bay of Bengal"
+parties: "13 Bilateral MoUs + Annual India–Vietnam Maritime Security Dialogue (Track 1) + 2024–2028 Plan of Action"
 icon: "satellite"
 order: 4
-missionWindow: "May 5–6, 2026"
+timeline: "May 5–6, 2026"
 coverImage: "/images/INDVIETNAM.jpg"
 ---
 

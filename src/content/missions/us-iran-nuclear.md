@@ -3,11 +3,11 @@ title: "US–Iran Nuclear Ceasefire Negotiations"
 summary: "Following months of conflict involving US-Israel strikes on Iran, both nations reached a tentative 60-day truce extension agreement with provisions to reopen the Strait of Hormuz and initiate nuclear talks, though final approval from President Trump is still pending."
 status: "EN ROUTE"
 statusTone: "gold"
-destination: "Middle East / Persian Gulf"
-vehicle: "14-Point Framework Memorandum of Understanding (MOU) via Pakistani Mediation"
+region: "Middle East / Persian Gulf"
+parties: "14-Point Framework Memorandum of Understanding (MOU) via Pakistani Mediation"
 icon: "star"
 order: 3
-missionWindow: "60-Day Extension"
+timeline: "60-Day Extension"
 coverImage: "/images/usairan.webp"
 ---
 

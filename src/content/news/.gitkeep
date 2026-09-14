@@ -1,0 +1,3 @@
+# Keeps this folder in Git while there are no news articles yet.
+# Astro's content loader fails if src/content/news/ does not exist.
+# Delete this file once real .md articles live here.
