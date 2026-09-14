@@ -5,9 +5,9 @@ status: "Nominal"
 statusTone: "green"
 icon: "star"
 order: 1
-vehicle: "Multilateral Diplomatic Framework"
-missionWindow: "Ongoing — quarterly review cycle"
-destination: "Persian Gulf, Strait of Hormuz"
+parties: "Multilateral Diplomatic Framework"
+timeline: "Ongoing — quarterly review cycle"
+region: "Persian Gulf, Strait of Hormuz"
 coverImage: "/images/Strait_of_Hormuz_and_Musandam_Peninsula_(MODIS_2018-12-10).jpg"
 ---
 
