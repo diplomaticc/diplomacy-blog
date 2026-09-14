@@ -3,11 +3,11 @@ title: "Washington–New Delhi Strategic Alignment"
 summary: "After months of tension over trade tariffs, energy disputes, and visa policies under Trump's 'America First' strategy, US Secretary of State Marco Rubio's May 2026 visit aimed to stabilize the fragile trust deficit between the two nations, resulting in renewed defense cooperation and optimism for an interim trade deal."
 status: "STABILIZING"
 statusTone: "gold"
-destination: "Indo-Pacific Region"
-vehicle: "10-Year Major Defence Partnership Framework Agreement + Underwater Domain Awareness Roadmap"
+region: "Indo-Pacific Region"
+parties: "10-Year Major Defence Partnership Framework Agreement + Underwater Domain Awareness Roadmap"
 icon: "satellite"
 order: 2
-missionWindow: "May 24–25, 2026"
+timeline: "May 24–25, 2026"
 coverImage: "/images/Rubio-e1779991085579-539x470.png"
 ---
 

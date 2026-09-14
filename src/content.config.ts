@@ -11,9 +11,9 @@ const missions = defineCollection({
     statusTone: z.enum(['green', 'blue', 'gold']),
     icon: z.enum(['satellite', 'rocket', 'star']),
     order: z.number(),
-    vehicle: z.string(),
-    missionWindow: z.string(),
-    destination: z.string(),
+    parties: z.string(),
+    timeline: z.string(),
+    region: z.string(),
     coverImage: z.string().default('/images/mission-article-01.png'),
   }),
 });
