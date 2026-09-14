@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/missions", "destination": "/agenda", "permanent": true },
+    { "source": "/missions/:path*", "destination": "/agenda/:path*", "permanent": true },
+    { "source": "/science", "destination": "/research", "permanent": true },
+    { "source": "/science/:path*", "destination": "/research/:path*", "permanent": true }
+  ]
+}

@@ -58,7 +58,7 @@ function MissionCard({ description, href, icon, status, statusTone, title, index
 export default function MissionsSection({ missions }: MissionsSectionProps) {
   return (
     <MotionConfig reducedMotion="user">
-      <section id="missions" className="bg-section-dark py-20 sm:py-24">
+      <section id="agenda" className="bg-section-dark py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -77,7 +77,7 @@ export default function MissionsSection({ missions }: MissionsSectionProps) {
               </h2>
             </div>
             <a
-              href="/missions/"
+              href="/agenda/"
               className="group hidden items-center gap-2 font-display text-[12px] uppercase tracking-[0.24em] text-white/55 transition-colors duration-300 hover:text-white md:inline-flex"
             >
               View All <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
