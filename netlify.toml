@@ -1,0 +1,26 @@
+# Keeps old URLs working if this repo is also served from Netlify.
+# Mirrors the redirects in vercel.json.
+
+[[redirects]]
+  from = "/missions"
+  to = "/agenda"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/missions/*"
+  to = "/agenda/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/science"
+  to = "/research"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/science/*"
+  to = "/research/:splat"
+  status = 301
+  force = true
