@@ -46,12 +46,11 @@ export default function FooterSection({ directory, meta, policies }: FooterSecti
             </div>
 
             <div>
-              <h3 className="font-display text-[11px] uppercase tracking-[0.26em] text-white/80">Coordinates</h3>
+              <h3 className="font-display text-[11px] uppercase tracking-[0.26em] text-white/80">Desk</h3>
               <div className="mt-6 space-y-3 text-[1.1rem] text-white/60">
-                <p>Launch Complex 39A</p>
-                <p>Cape Canaveral, FL</p>
-                <p>Earth, Sol System</p>
-                <p className="text-accent-blue">28.6082° N, 80.6041° W</p>
+                <p>Independent Analysis Bureau</p>
+                <p>Global Coverage</p>
+                <p className="text-accent-blue">Est. 2026</p>
               </div>
             </div>
           </div>
